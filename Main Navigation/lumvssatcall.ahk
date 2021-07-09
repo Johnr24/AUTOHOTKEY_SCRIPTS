@@ -11,3 +11,4 @@ SendEvent, {click, %curves%, %tby%}
 MouseMove   %lumvssat%, %cya%
 SendEvent, {Click %lumvssat% , %cya% }
 MouseMove %x%, %y%
+ExitApp
