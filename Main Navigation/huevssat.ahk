@@ -9,5 +9,6 @@ MouseGetPos x, y
 MouseMove, %curves%, %tby%
 SendEvent, {click, %curves%, %tby%}
 MouseMove  %huevssat% ,%cya%
-SendEvent, {Click ,huevssat% ,%cya%}
+SendEvent, {Click ,%huevssat% ,%cya%}
 MouseMove %x%, %y%
+ExitApp
