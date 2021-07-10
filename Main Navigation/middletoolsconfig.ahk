@@ -151,3 +151,34 @@ sharpen_select := blur_select + 20
 mist_select := sharpen_select + 20 
 blur_reset := 3050
 
+;magicmask
+mm_reset := 3011
+
+mm_menu := 3050
+mm_menu_y := 1703
+
+mm_topbar_y := 1741
+
+mm_quality_y := 1807
+mm_faster := 2852
+mm_better := 2963
+
+mm_person := 1553
+mm_features := 1662
+
+mm_fftracked := 2212
+mm_lftracked := 2381
+mm_trackbackoneframe := 2243
+mm_trackforwardoneframe := 2357
+mm_trackforward := 2327
+mm_trackbackward := 2274
+mm_trackstop := 2300
+
+mm_plus := 2940
+mm_minus := 2972
+
+mm_maskinvert := 3007
+mm_show := 3042
+
+mm_p_reset_x := 3053
+mm_p_reset_y := 1782
