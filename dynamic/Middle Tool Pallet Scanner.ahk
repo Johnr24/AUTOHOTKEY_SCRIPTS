@@ -5,7 +5,7 @@ SetTitleMatchMode, 3 ; A window's title must exactly match WinTitle to be a matc
 SetWorkingDir, %A_ScriptDir%
 SplitPath, A_ScriptName, , , , thisscriptname
 #MaxThreadsPerHotkey, 1 ; no re-entrant hotkey handling
-#NoEnv  ; Recommended for performance and compatibility with future AutoHotkey releases.
+  ; Recommended for performance and compatibility with future AutoHotkey releases.
 ; #Warn  ; Enable warnings to assist with detecting common errors.
 #Include, C:\AUTOHOTKEY_SCRIPTS\Main Navigation\middletoolsconfig.ahk
 
