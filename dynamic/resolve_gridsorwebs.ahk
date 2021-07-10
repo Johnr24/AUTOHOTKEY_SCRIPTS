@@ -9,23 +9,21 @@ SplitPath, A_ScriptName, , , , thisscriptname
 ; #Warn  ; Enable warnings to assist with detecting common errors.
 #Include, C:\AUTOHOTKEY_SCRIPTS\Main Navigation\middletoolsconfig.ahk
 
+CoordMode, Pixel
 
 
 resolvecheck:
 if WinActive("ahk_exe Resolve.exe")
-    CoordMode, Pixel
     PixelGetColor, colourtabcheck, %colourpage%, %pagebar%
-
     IfEqual, colourtabcheck, 0x000000
     {
-        Goto, mod
+        Goto, grids_or_webs
     }
 if not WinActive("ahk_exe Resolve.exe")
     Goto, resolvecheck
 
-mod:
+grids_or_webs:
 if WinActive("ahk_exe Resolve.exe")
-CoordMode, Pixel
     PixelGetColor, webcolour, %cw_web%, %cw_selectmenu%
     IfEqual, webcolour, 0xFFFFFF
     {
@@ -35,7 +33,7 @@ CoordMode, Pixel
     }
     Else
     {
-        FileAppend, (web), C:\temp\cw\grids.txt
+        FileAppend, (grids), C:\temp\cw\grids.txt
         FileDelete, C:\temp\cw\web.txt
         Goto, resolvecheck
     }
