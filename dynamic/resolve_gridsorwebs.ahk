@@ -11,7 +11,7 @@ SplitPath, A_ScriptName, , , , thisscriptname
 
 CoordMode, Pixel
 
-
+ce
 resolvecheck:
 if WinActive("ahk_exe Resolve.exe")
     PixelGetColor, colourtabcheck, %colourpage%, %pagebar%
