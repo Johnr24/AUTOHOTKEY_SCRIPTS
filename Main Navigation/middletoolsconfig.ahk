@@ -78,7 +78,9 @@ cwhsl_h_reset := cwhsl_h_feather + 40
 cwhsl_s_feather := 2924
 cwhsl_s_reset  := 2961
 cwhsl_l_reset := 3030
-
+cwg_y := 1738
+cwg_grid_1 := 2858
+cwg_grid_2 := cwg_grid_1 + 100
 ;sizing window
 size_y := 1707
 ref_s := 2300
