@@ -19,16 +19,16 @@ SplitPath, A_ScriptName, , , , thisscriptname
 IfExist, C:\temp\cw\web.txt
     {
     MouseGetPos x, y 
-    MouseMove, %cw_pin_depin%, %cw_tools_y%
-    SendEvent {Click, %cw_pin_depin%, %cw_tools_y%}
+    MouseMove, %cw_pull%, %cw_tools_y%
+    SendEvent {Click, %cw_pull%, %cw_tools_y%}
     MouseMove %x%, %y%
     ExitApp
     }
 Else
     {
     MouseGetPos x, y 
-    MouseMove, %cw_pin_depin%, %cw_tools_y_2%
-    SendEvent {Click, %cw_pin_depin%, %cw_tools_y_2%}
+    MouseMove, %cw_pull%, %cw_tools_y_2%
+    SendEvent {Click, %cw_pull%, %cw_tools_y_2%}
     MouseMove %x%, %y%
     ExitApp
     }

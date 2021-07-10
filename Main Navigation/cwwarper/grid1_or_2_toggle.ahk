@@ -15,20 +15,33 @@ SplitPath, A_ScriptName, , , , thisscriptname
 #Include, C:\AUTOHOTKEY_SCRIPTS\Main Navigation\middletoolsconfig.ahk
 
 
-
-IfExist, C:\temp\cw\web.txt
-    {
-    MouseGetPos x, y 
-    MouseMove, %cw_pin_depin%, %cw_tools_y%
-    SendEvent {Click, %cw_pin_depin%, %cw_tools_y%}
-    MouseMove %x%, %y%
-    ExitApp
-    }
+gridenablecheck:
+IfExist, C:\temp\cw\grids.txt
+{
+    Goto, gridtoggle
+}
 Else
-    {
-    MouseGetPos x, y 
-    MouseMove, %cw_pin_depin%, %cw_tools_y_2%
-    SendEvent {Click, %cw_pin_depin%, %cw_tools_y_2%}
+{
+    ExitApp
+}
+
+gridtoggle:
+PixelGetColor, webtoggle, %cwg_grid_1%, %cwg_y% 
+
+IfEqual, webtoggle, 0x171717   
+
+{   
+    MouseGetPos x, y
+    MouseMove, %cwg_grid_2%, %cwg_y%
+    SendEvent {Click , %cwg_grid_2%, %cwg_y%}
     MouseMove %x%, %y%
     ExitApp
-    }
+}
+Else   ;very important
+{
+    MouseGetPos xa, ya
+    MouseMove, %cwg_grid_1%, %cwg_y%
+    SendEvent {Click , %cwg_grid_1%, %cwg_y%}
+    MouseMove %xa%, %ya%
+    ExitApp
+}
