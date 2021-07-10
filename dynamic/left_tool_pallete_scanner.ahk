@@ -17,38 +17,32 @@ resolvecheck:
     PixelGetColor, colourtabcheck, %colourpage%, %pagebar%
     IfEqual, colourtabcheck, 0x000000
     {
-        Goto, curvescheck
+        Goto, hdrchecker
     }
-    Else
-        {
-            Goto, editcheck
-        }
 if not WinActive("ahk_exe Resolve.exe")
     Goto, resolvecheck
 
-curvescheck:
+hdrchecker:
 if WinActive("ahk_exe Resolve.exe")
-    PixelGetColor, curves_c, %curves%, %tby%
-    IfEqual, curves_c, 0xFBFBFB
+    PixelGetColor, hdr_c, %HDR_tools%, %tby%
+    IfEqual, hdr_c, 0xFFFFFF
     {
-        Run, C:\AUTOHOTKEY_SCRIPTS\exe\curvesactive.exe
-        FileAppend, on, C:\temp\mt\curves.txt
-        Goto, curvescheckeroff
+        Run, C:\AUTOHOTKEY_SCRIPTS\exe\hdractive.exe
+        Goto, hdrcheckeroff
     }
 Else
 {
-    Goto, colourwarpercheck ;next one in the chain
+    Goto, resolvecheck ;back to the start expand off this one if need to
 }
 
-curvescheckeroff:
+hdrcheckeroff:
 if WinActive("ahk_exe Resolve.exe")
-    PixelGetColor, curves_c, %curves%, %tby%
-IfEqual, curves_c, 0xFBFBFB
+    PixelGetColor, hdr_c, %HDR_tools%, %tby%
+IfEqual, hdr_c, 0xFFFFFF
 {
-    Goto, curvescheckeroff
+    Goto, hdrcheckeroff
 }
 Else
 {
-    FileDelete, C:\temp\mt\curves.txt
     Goto, resolvecheck
 }
