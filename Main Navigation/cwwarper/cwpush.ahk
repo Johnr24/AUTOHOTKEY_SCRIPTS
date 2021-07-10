@@ -15,7 +15,6 @@ SplitPath, A_ScriptName, , , , thisscriptname
 #Include, C:\AUTOHOTKEY_SCRIPTS\Main Navigation\middletoolsconfig.ahk
 
 
-FileAppend, %ax% %ay%, C:\temp\outputvars.txt
 
 IfExist, C:\temp\cw\web.txt
     {

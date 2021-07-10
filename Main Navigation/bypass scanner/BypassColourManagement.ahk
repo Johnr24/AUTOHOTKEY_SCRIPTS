@@ -11,24 +11,22 @@ SplitPath, A_ScriptName, , , , thisscriptname
 ; SetWinDelay, -1 ; Remove short delay done automatically after every windowing command except IfWinActive and IfWinExist
 ; SetKeyDelay, -1, -1 ; Remove short delay done automatically after every keystroke sent by Send or ControlSend
 ; SetMouseDelay, -1 ; Remove short delay done automatically after Click and MouseMove/Click/Drag
+#Include, C:\AUTOHOTKEY_SCRIPTS\Main Navigation\middletoolsconfig.ahk
 
 PixelSearch, Px, Py, 0, 1611, 4095, 1633, 0xCFCFCF , 0, Fast
 
-FileAppend,( %Px% + %Py% ), C:\temp\fuck.txt
-
+;vars to do the right click
 Rx := Px + 100
 Ry := Py - 50
 Ry2 := Ry - 220
-FileAppend,( %Rx% + %Ry% ), C:\temp\fuck.txt
 
 MouseGetPos x, y 
 MouseMove, %Rx%, %Ry%
-SendEvent {Click Right, %Px%, %Ry%}
-Sleep, 100
-MouseMove, %Rx%, %Ry2%
-Sleep, 100
+SendEvent {Click Right, %Px%, %Ry%} ;init right click
+Sleep, 35
+MouseMove, %Rx%, %Ry2% 
 SendEvent {Click, %Rx%, %Ry2%}
-Sleep, 100
+;Sleep, 35
 Send, Click
 MouseMove %x%, %y%
 ExitApp
