@@ -15,7 +15,7 @@ SplitPath, A_ScriptName, , , , thisscriptname
 
 MouseGetPos x, y
 MouseGetPos x, y 
-MouseMove, %stabgo%, %t_lower%
-SendEvent {Click, %stabgo%, %t_lower%}
+MouseMove, %stabgo%, %stab_lower%
+SendEvent {Click, %stabgo%, %stab_lower%}
 MouseMove %x%, %y%
 ExitApp, 

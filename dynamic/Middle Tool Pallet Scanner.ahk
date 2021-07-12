@@ -31,21 +31,19 @@ if WinActive("ahk_exe Resolve.exe")
     PixelGetColor, curves_c, %curves%, %tby%
     IfEqual, curves_c, 0xFBFBFB
     {
-        Run, C:\AUTOHOTKEY_SCRIPTS\exe\curvesactive.exe
-        FileAppend, on, C:\temp\mt\curves.txt
-        Goto, curvescheckeroff
+        Goto, curves_stopcheck
     }
 Else
 {
     Goto, colourwarpercheck ;next one in the chain
 }
 
-curvescheckeroff:
+curves_checkeroff:
 if WinActive("ahk_exe Resolve.exe")
     PixelGetColor, curves_c, %curves%, %tby%
 IfEqual, curves_c, 0xFBFBFB
 {
-    Goto, curvescheckeroff
+    Goto, curves_checkeroff
 }
 Else
 {
@@ -58,9 +56,7 @@ if WinActive("ahk_exe Resolve.exe")
     PixelGetColor, colourwarper_c, %colourwarper%, %tby%
     IfEqual, colourwarper_c, 0x6E6E6E
     {
-        Run, C:\AUTOHOTKEY_SCRIPTS\exe\cwactive.exe
-        FileAppend, on, C:\temp\mt\colourwarper.txt
-        Goto, colourwarpercheckeroff
+        Goto, colourwarper_stopcheck
     }
     Else
     {
@@ -68,12 +64,12 @@ Goto, qualiferchecker
     }
 
 
-colourwarpercheckeroff:
+colourwarper_checkeroff:
 if WinActive("ahk_exe Resolve.exe")
     PixelGetColor, colourwarper_c, %colourwarper%, %tby%
 IfEqual, colourwarper_c, 0x6E6E6E
 {
-    Goto, colourwarpercheckeroff
+    Goto, colourwarper_checkeroff
 }
 Else
 {
@@ -86,21 +82,20 @@ if WinActive("ahk_exe Resolve.exe")
     PixelGetColor, qualifer_C, %qualifer%, %tby%
     IfEqual, qualifer_C, 0xFFFFFF
     {
-        Run, C:\AUTOHOTKEY_SCRIPTS\exe\keyactive.exe
-        FileAppend, on, C:\temp\mt\keyer.txt
-        Goto, qualifercheckeroff
+
+        Goto, qualifer_stopcheck
     }
     Else
     {
 Goto, windowchecker
     }
 
-qualifercheckeroff:
+qualifer_checkeroff:
 if WinActive("ahk_exe Resolve.exe")
     PixelGetColor, qualifer_C, %qualifer%, %tby%
 IfEqual, qualifer_C, 0xFFFFFF
 {
-    Goto, qualifercheckeroff
+    Goto, qualifer_checkeroff
 }
 Else
 {
@@ -113,9 +108,8 @@ if WinActive("ahk_exe Resolve.exe")
     PixelGetColor, powerwindow_C, %powerwindow%, %tby%
     IfEqual, powerwindow_C, 0x404040
     {
-        Run, C:\AUTOHOTKEY_SCRIPTS\exe\windowactive.exe
-        FileAppend, on, C:\temp\mt\window.txt
-        Goto, windowcheckeroff
+
+        Goto, window_stopcheck
     }
     Else
     {
@@ -123,12 +117,12 @@ Goto, trackerchecker
     }
 
 
-windowcheckeroff:
+window_checkeroff:
 if WinActive("ahk_exe Resolve.exe")
     PixelGetColor, powerwindow_C, %powerwindow%, %tby%
 IfEqual, powerwindow_C, 0x404040
 {
-    Goto, windowcheckeroff
+    Goto, window_checkeroff
 }
 Else
 {
@@ -141,9 +135,8 @@ if WinActive("ahk_exe Resolve.exe")
     PixelGetColor, tracker_c, %tracker%, 1667
     IfEqual, tracker_c, 0xFFFFFF
     {
-        Run, C:\AUTOHOTKEY_SCRIPTS\exe\trackeractive.exe
-        FileAppend, on, C:\temp\mt\tracker.txt
-        Goto, trackercheckeroff
+
+        Goto, tracker_stopcheck
     }
     Else
     {
@@ -151,12 +144,12 @@ Goto, magicmaskchecker
     }
 
 
-trackercheckeroff:
+tracker_checkeroff:
 if WinActive("ahk_exe Resolve.exe")
     PixelGetColor, tracker_c, %tracker%, 1667
 IfEqual, tracker_c, 0xFFFFFF
 {
-    Goto, trackercheckeroff
+    Goto, tracker_checkeroff
 }
 Else
 {
@@ -170,9 +163,7 @@ if WinActive("ahk_exe Resolve.exe")
     PixelGetColor, magicmask_c, %magicmask%, %tby%
     IfEqual, magicmask_c, 0x626262
     {
-        Run, C:\AUTOHOTKEY_SCRIPTS\exe\magicmaskactive.exe
-        FileAppend, on, C:\temp\mt\magicmask.txt
-        Goto, magicmaskcheckeroff
+        Goto, magicmask_stopcheck
     }
     Else
     {
@@ -180,12 +171,12 @@ Goto, blurtoolchecker
     }
 
 
-magicmaskcheckeroff:
+magicmask_checkeroff:
 if WinActive("ahk_exe Resolve.exe")
     PixelGetColor, magicmask_c, %magicmask%, %tby%
 IfEqual, magicmask_c, 0x626262
 {
-    Goto, magicmaskcheckeroff
+    Goto, magicmask_checkeroff
 }
 Else
 {
@@ -198,9 +189,7 @@ if WinActive("ahk_exe Resolve.exe")
     PixelGetColor, blurtool_c, %blurtool%, %tby%
     IfEqual, blurtool_c, 0xFFFFFF
     {
-        Run, C:\AUTOHOTKEY_SCRIPTS\exe\blurtoolactive.exe
-        FileAppend, on, C:\temp\mt\.txt
-        Goto, blurtoolcheckeroff
+        Goto, blurtool_stopcheck
     }
     Else
     {
@@ -208,16 +197,16 @@ Goto, keywindowchecker
     }
 
 
-blurtoolcheckeroff:
+blurtool_checkeroff:
 if WinActive("ahk_exe Resolve.exe")
     PixelGetColor, blurtool_c, %blurtool%, %tby%
 IfEqual, blurtool_c, 0xFFFFFF
 {
-    Goto, blurtoolcheckeroff
+    Goto, blurtool_checkeroff
 }
 Else
 {
-    FileDelete, C:\temp\mt\.txt
+    FileDelete, C:\temp\mt\blur.txt
     Goto, resolvecheck
 }
 keywindowchecker:
@@ -233,12 +222,12 @@ Goto, sizingchecker
     }
 
 
-keywindowcheckeroff:
+keywindow_checkeroff:
 if WinActive("ahk_exe Resolve.exe")
     PixelGetColor, keywindow_c,  %keytool%, %tby%
 IfEqual, keywindow_c, 0xFFFFFF
 {
-    Goto, keywindowcheckeroff
+    Goto, keywindow_checkeroff
 }
 Else
 {
@@ -258,17 +247,14 @@ keywindowdoublecheck:
     if WinActive("ahk_exe Resolve.exe")
             Run, C:\AUTOHOTKEY_SCRIPTS\exe\keywindowactive.exe
             FileAppend, on, C:\temp\mt\keywindow.txt
-            Goto, keywindowcheckeroff
+            Goto, keywindow_checkeroff
 
 sizingchecker:
 if WinActive("ahk_exe Resolve.exe")
     PixelGetColor, key_c, %sizing%, %tby%
     IfEqual, key_c, 0x484848
     {
-        Run, C:\AUTOHOTKEY_SCRIPTS\exe\sizingactive.exe
-        FileAppend, on, C:\temp\mt\sizing.txt
-
-        Goto, sizingchecker2
+        Goto, sizing_stopchecker
     }
     Else
     {
@@ -276,12 +262,12 @@ Goto, resolvecheck ;CHANGE THIS TO EXPAND
     }
 
 
-sizingchecker2:
+sizing_checkeroff:
 if WinActive("ahk_exe Resolve.exe")
     PixelGetColor, key_c, %sizing%, %tby%
 IfEqual, key_c, 0x484848
 {
-    Goto, sizingchecker2
+    Goto, sizing_checkeroff
 }
 Else
 {
@@ -313,5 +299,124 @@ Else
     Goto, resolvecheck
 }
 
+curves_stopcheck:
+    IfExist, C:\temp\keysuspend.txt
+{
+    Goto, resolvecheck
+}
+Else
+{
+Goto, curves_doublecheck
+curves_doublecheck:
+    if WinActive("ahk_exe Resolve.exe")
+            Run, C:\AUTOHOTKEY_SCRIPTS\exe\curvesactive.exe
+            FileAppend, on, C:\temp\mt\curves.txt
+            Goto, curves_checkeroff
+}
 
+magicmask_stopcheck:
+IfExist, C:\temp\keysuspend.txt
+{
+    Goto, resolvecheck
+}
+Else
+{
+Goto, magicmask_doublecheck
+magicmask_doublecheck:
+    if WinActive("ahk_exe Resolve.exe")
+            Run, C:\AUTOHOTKEY_SCRIPTS\exe\magicmaskactive.exe
+            FileAppend, on, C:\temp\mt\magicmask.txt
+            Goto, magicmask_checkeroff
+}
 
+sizing_stopchecker:
+
+IfExist, C:\temp\keysuspend.txt
+{
+    Goto, resolvecheck
+}
+Else
+{
+Goto, sizing_doublecheck
+sizing_doublecheck:
+    if WinActive("ahk_exe Resolve.exe")
+            Run, C:\AUTOHOTKEY_SCRIPTS\exe\sizingactive.exe
+            FileAppend, on, C:\temp\mt\sizing.txt
+            Goto, sizing_checkeroff
+}
+
+colourwarper_stopcheck:
+IfExist, C:\temp\keysuspend.txt
+{
+    Goto, resolvecheck
+}
+Else
+{
+Goto, colourwarper_doublecheck
+colourwarper_doublecheck:
+    if WinActive("ahk_exe Resolve.exe")
+            Run, C:\AUTOHOTKEY_SCRIPTS\exe\cwactive.exe
+            FileAppend, on, C:\temp\mt\colourwarper.txt
+            Goto, colourwarper_checkeroff
+}
+
+tracker_stopcheck:
+IfExist, C:\temp\keysuspend.txt
+{
+    Goto, resolvecheck
+}
+Else
+{
+Goto, tracker_doublecheck
+tracker_doublecheck:
+    if WinActive("ahk_exe Resolve.exe")
+            Run, C:\AUTOHOTKEY_SCRIPTS\exe\trackeractive.exe
+            FileAppend, on, C:\temp\mt\tracker.txt
+            Goto, tracker_checkeroff
+}
+
+qualifer_stopcheck:
+IfExist, C:\temp\keysuspend.txt
+{
+    Goto, resolvecheck
+}
+Else
+{
+Goto, qualifer_doublecheck
+qualifer_doublecheck:
+    if WinActive("ahk_exe Resolve.exe")
+            Run, C:\AUTOHOTKEY_SCRIPTS\exe\keyactive.exe
+            FileAppend, on, C:\temp\mt\keyer.txt
+            Goto, qualifer_checkeroff
+}
+
+blurtool_stopcheck:
+IfExist, C:\temp\keysuspend.txt
+{
+    Goto, resolvecheck
+}
+Else
+{
+Goto, blurtool_doublecheck
+blurtool_doublecheck:
+    if WinActive("ahk_exe Resolve.exe")
+            Run, C:\AUTOHOTKEY_SCRIPTS\exe\blurtoolactive.exe
+            FileAppend, on, C:\temp\mt\blur.txt
+            Goto, blurtool_checkeroff
+}
+
+window_stopcheck:
+IfExist, C:\temp\keysuspend.txt
+{
+
+    Goto, resolvecheck
+}
+Else
+{
+Goto, window_doublecheck
+window_doublecheck:
+    if WinActive("ahk_exe Resolve.exe")
+            Run, C:\AUTOHOTKEY_SCRIPTS\exe\windowactive.exe
+            FileAppend, on, C:\temp\mt\window.txt
+            Goto, window_checkeroff
+}
