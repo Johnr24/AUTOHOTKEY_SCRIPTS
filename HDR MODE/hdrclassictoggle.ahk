@@ -12,7 +12,6 @@ SplitPath, A_ScriptName, , , , thisscriptname
  SetKeyDelay, -1, -1 ; Remove short delay done automatically after every keystroke sent by Send or ControlSend
 SetMouseDelay, -1 ; Remove short delay done automatically after Click and MouseMove/Click/Drag
 #Include %A_ScriptDir%\zoneconfig.ahk
-#include C:\AUTOHOTKEY_SCRIPTS\lib\AutoHotStreamDeck.ahk
 
 #Include, C:\AUTOHOTKEY_SCRIPTS\Main Navigation\middletoolsconfig.ahk
 
