@@ -107,6 +107,7 @@ clip := 2900
 frame := 2945
 stabgo := 3000
 t_lower := 1566
+stab_lower := 1743
 
 ;shapes window
 square_w := 1796
