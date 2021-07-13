@@ -17,6 +17,11 @@ All the scripts in this folder are designed for a 4096 x 2160 screen resolution
 ![](https://github.com/Johnr24/AUTOHOTKEY_SCRIPTS/blob/master/src/streamdeck_profileimg_01.png?raw=true)
 
 3. open resolve and the streamdecks should actively change depending on what tool you have open
+   
+
+
+## Pull Requests and Issues
+I am taking pull-requests and issues please use the relevant functions on github to submit them. 
 
 ## Attributions
 Some of these scripts/profiles and icons where written/created by Joe D'anna and have been shared with his permission http://twitter.com/joeydanna
