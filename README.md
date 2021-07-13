@@ -3,7 +3,7 @@
 These scripts are things that I have made using autohotkey in order to expand the ability of my tangent elements panel and make certain repetitive operations in grading faster This is my setup (excuse the cable mess) the two panels in the middle of the TK panel are Elgato StreamDecks 
 ![](https://github.com/Johnr24/AUTOHOTKEY_SCRIPTS/blob/master/src/readme_02.jpg?raw=true)
 
-These StreamDecks change automatically using AutoHotKey scripts that scan Davinci Resolves GUI for changes
+These StreamDecks change automatically using AutoHotKey scripts that scan Davinci Resolves GUI for changes, which then inturn launch little autohotkey applications that appear onscreen for enough time for the Elgato StreamDeck Software to notice and change to the relevant profile.
 
 
 ## User Guide
