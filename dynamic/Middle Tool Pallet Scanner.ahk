@@ -11,7 +11,6 @@ SplitPath, A_ScriptName, , , , thisscriptname
 
 CoordMode, Pixel
 
-
 resolvecheck: 
     if WinActive("ahk_exe Resolve.exe")
     PixelGetColor, colourtabcheck, %colourpage%, %pagebar%
@@ -236,7 +235,6 @@ Else
 }
 
 keystopcheck:
-if WinActive("ahk_exe Resolve.exe")
 IfExist, C:\temp\keysuspend.txt
 {
 
@@ -245,7 +243,6 @@ IfExist, C:\temp\keysuspend.txt
 Else
 Goto, keywindowdoublecheck
 keywindowdoublecheck:
-    if WinActive("ahk_exe Resolve.exe")
             Run, C:\AUTOHOTKEY_SCRIPTS\exe\keywindowactive.exe
             FileAppend, on, C:\temp\mt\keywindow.txt
             Goto, keywindow_checkeroff
@@ -293,11 +290,11 @@ editcheckhold:
     PixelGetColor, edit_c, 1949, 2136
 IfEqual, edit_c, 0x000000
 {
-    Goto, editcheckhold
+    Goto, editcheckhold 
 }
 Else
 {
-    Goto, resolvecheck
+    Goto, resolvecheck ;extend if wanting to create media or deliver pages
 }
 
 curves_stopcheck:
@@ -309,7 +306,6 @@ Else
 {
 Goto, curves_doublecheck
 curves_doublecheck:
-    if WinActive("ahk_exe Resolve.exe")
             Run, C:\AUTOHOTKEY_SCRIPTS\exe\curvesactive.exe
             FileAppend, on, C:\temp\mt\curves.txt
             Goto, curves_checkeroff
@@ -324,14 +320,12 @@ Else
 {
 Goto, magicmask_doublecheck
 magicmask_doublecheck:
-    if WinActive("ahk_exe Resolve.exe")
             Run, C:\AUTOHOTKEY_SCRIPTS\exe\magicmaskactive.exe
             FileAppend, on, C:\temp\mt\magicmask.txt
             Goto, magicmask_checkeroff
 }
 
 sizing_stopchecker:
-if WinActive("ahk_exe Resolve.exe")
 IfExist, C:\temp\keysuspend.txt
 {
     Goto, resolvecheck
@@ -340,14 +334,12 @@ Else
 {
 Goto, sizing_doublecheck
 sizing_doublecheck:
-    if WinActive("ahk_exe Resolve.exe")
             Run, C:\AUTOHOTKEY_SCRIPTS\exe\sizingactive.exe
             FileAppend, on, C:\temp\mt\sizing.txt
             Goto, sizing_checkeroff
 }
 
 colourwarper_stopcheck:
-if WinActive("ahk_exe Resolve.exe")
 IfExist, C:\temp\keysuspend.txt
 {
     Goto, resolvecheck
@@ -356,14 +348,12 @@ Else
 {
 Goto, colourwarper_doublecheck
 colourwarper_doublecheck:
-    if WinActive("ahk_exe Resolve.exe")
             Run, C:\AUTOHOTKEY_SCRIPTS\exe\cwactive.exe
             FileAppend, on, C:\temp\mt\colourwarper.txt
             Goto, colourwarper_checkeroff
 }
 
 tracker_stopcheck:
-if WinActive("ahk_exe Resolve.exe")
 IfExist, C:\temp\keysuspend.txt
 {
     Goto, resolvecheck
@@ -372,14 +362,12 @@ Else
 {
 Goto, tracker_doublecheck
 tracker_doublecheck:
-    if WinActive("ahk_exe Resolve.exe")
             Run, C:\AUTOHOTKEY_SCRIPTS\exe\trackeractive.exe
             FileAppend, on, C:\temp\mt\tracker.txt
             Goto, tracker_checkeroff
 }
 
 qualifer_stopcheck:
-if WinActive("ahk_exe Resolve.exe")
 IfExist, C:\temp\keysuspend.txt
 {
     Goto, resolvecheck
@@ -388,14 +376,12 @@ Else
 {
 Goto, qualifer_doublecheck
 qualifer_doublecheck:
-    if WinActive("ahk_exe Resolve.exe")
             Run, C:\AUTOHOTKEY_SCRIPTS\exe\keyactive.exe
             FileAppend, on, C:\temp\mt\keyer.txt
             Goto, qualifer_checkeroff
 }
 
 blurtool_stopcheck:
-if WinActive("ahk_exe Resolve.exe")
 IfExist, C:\temp\keysuspend.txt
 {
     Goto, resolvecheck
@@ -404,14 +390,12 @@ Else
 {
 Goto, blurtool_doublecheck
 blurtool_doublecheck:
-    if WinActive("ahk_exe Resolve.exe")
             Run, C:\AUTOHOTKEY_SCRIPTS\exe\blurtoolactive.exe
             FileAppend, on, C:\temp\mt\blur.txt
             Goto, blurtool_checkeroff
 }
 
 window_stopcheck:
-if WinActive("ahk_exe Resolve.exe")
 IfExist, C:\temp\keysuspend.txt
 {
 
@@ -421,7 +405,6 @@ Else
 {
 Goto, window_doublecheck
 window_doublecheck:
-    if WinActive("ahk_exe Resolve.exe")
             Run, C:\AUTOHOTKEY_SCRIPTS\exe\windowactive.exe
             FileAppend, on, C:\temp\mt\window.txt
             Goto, window_checkeroff
