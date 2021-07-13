@@ -8,7 +8,10 @@ These StreamDecks change automatically using AutoHotKey scripts that scan Davinc
 
 ## User Guide
 All the scripts in this folder are designed for a 4096 x 2160 screen resolution
-
+you should be able to most of the values for the scripts by editing the file found at 
+```
+C:\AUTOHOTKEYSCRIPTS\Main Navigation\middletoolsconfig.ahk
+```
 ## Install Guide
 ### Autohotkey Install side
 1. Place the repository in the root of the C Drive.
@@ -18,7 +21,8 @@ All the scripts in this folder are designed for a 4096 x 2160 screen resolution
 
 ### StreamDeck Profiles
 1. Install the StreamDeck profiles in the normal way each profile will tie into a resolve pallet function 
-2. using the streamdeck application profile function map the various `"active".exe` files from `C:\AUTOHOTKEY_SCRIPTS\exe\`
+2. using the streamdeck application profile function map the various `"active".exe` files from `C:\AUTOHOTKEY_SCRIPTS\exe\` **Please note that using a Default profile will not work with this method.**
+3. Create the directory `C:\temp` inside that create 3 more folders called `mt`, `cw` and `scan`
    
 ![](https://github.com/Johnr24/AUTOHOTKEY_SCRIPTS/blob/master/src/streamdeck_profileimg_01.png?raw=true)
 
