@@ -11,16 +11,17 @@ SplitPath, A_ScriptName, , , , thisscriptname
 ; SetWinDelay, -1 ; Remove short delay done automatically after every windowing command except IfWinActive and IfWinExist
 ; SetKeyDelay, -1, -1 ; Remove short delay done automatically after every keystroke sent by Send or ControlSend
 ; SetMouseDelay, -1 ; Remove short delay done automatically after Click and MouseMove/Click/Drag
-
-
-
-5fwd := 
-5bck := 
-
+#Include, C:\AUTOHOTKEY_SCRIPTS\Main Navigation\middletoolsconfig.ahk
 MouseGetPos x, y
-MouseMove, 855, 1746
-SendEvent {Click , 855, 1746}
-Sleep, 1
-MouseMove, 842, 1746
-SendEvent {Click}, 842, 1746}
-MouseMove %x%, %y%
+arrowcolour := 0x838383
+
+main:
+    PixelSearch, leftx, lefty, leftarrow_x1, leftarrow_y1, leftarrow_x2, leftarrow_y2, arrowcolour, 0, Fast
+
+2_left_x := leftx 
+2_left_y := lefty 
+
+MouseMove %2_left_x%, %2_left_y%
+SendEvent,{Click, %2_left_x%,%2_left_y%}
+MouseMove, %x%, %y% 
+ExitApp
