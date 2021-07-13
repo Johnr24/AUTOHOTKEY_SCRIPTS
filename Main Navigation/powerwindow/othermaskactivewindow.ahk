@@ -14,16 +14,12 @@ SplitPath, A_ScriptName, , , , thisscriptname
 #Include, C:\AUTOHOTKEY_SCRIPTS\Main Navigation\middletoolsconfig.ahk
 PixelSearch, Px, Py, 2000, 1750, 2000, 2100, 0x212121, 0, Fast
 
-FileAppend, (%Px% %Py%), C:\temp\outputvars.txt
 
 2Px := Px + 730
 2Py := Py + 25
 
 MouseMove %2Px%, %2Py%
 SendEvent,{Click, %2Px%,%2Py%}
-FileAppend, %2Px% %2Py%, C:\temp\outputvars.txt
+
 
 ExitApp
-
-
-PixelSearch, OutputVarX, OutputVarY, 0, 1605, , Y2, ColorID [, Variation
