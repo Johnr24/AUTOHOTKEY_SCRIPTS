@@ -14,7 +14,7 @@ All the scripts in this folder are designed for a 4096 x 2160 screen resolution
 1. Install the StreamDeck profiles in the normal way each profile will tie into a resolve pallet function 
 2. using the streamdeck application profile function map the various `"active".exe` files from 'C:\AUTOHOTKEY_SCRIPTS\exe\'
    
-![](src\streamdeck_profileimg_01.png)
+![](https://github.com/Johnr24/AUTOHOTKEY_SCRIPTS/blob/master/src/streamdeck_profileimg_01.png?raw=true)
 
 3. open resolve and the streamdecks should actively change depending on what tool you have open
 
