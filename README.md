@@ -1,7 +1,9 @@
 # AUTOHOTKEY_SCRIPTS
 ## About
-These scripts are things that I have made using autohotkey in order to expand the ability of my tangent elements panel and make certain repetitive operations in grading faster
-This is my setup 
+These scripts are things that I have made using autohotkey in order to expand the ability of my tangent elements panel and make certain repetitive operations in grading faster This is my setup (excuse the cable mess) the two panels in the middle of the TK panel are Cosiar Elgato StreamDecks 
+![](https://github.com/Johnr24/AUTOHOTKEY_SCRIPTS/blob/master/src/readme_02.jpg?raw=true)
+
+These streamdecks change automatically using AutoHotKey scripts that scan resolves GUI for changes
 
 ## User Guide
 All the scripts in this folder are designed for a 4096 x 2160 screen resolution
@@ -15,7 +17,7 @@ All the scripts in this folder are designed for a 4096 x 2160 screen resolution
 
 ### StreamDeck Profiles
 1. Install the StreamDeck profiles in the normal way each profile will tie into a resolve pallet function 
-2. using the streamdeck application profile function map the various `"active".exe` files from 'C:\AUTOHOTKEY_SCRIPTS\exe\'
+2. using the streamdeck application profile function map the various `"active".exe` files from `C:\AUTOHOTKEY_SCRIPTS\exe\`
    
 ![](https://github.com/Johnr24/AUTOHOTKEY_SCRIPTS/blob/master/src/streamdeck_profileimg_01.png?raw=true)
 
