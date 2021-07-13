@@ -236,6 +236,7 @@ Else
 }
 
 keystopcheck:
+if WinActive("ahk_exe Resolve.exe")
 IfExist, C:\temp\keysuspend.txt
 {
 
@@ -330,7 +331,7 @@ magicmask_doublecheck:
 }
 
 sizing_stopchecker:
-
+if WinActive("ahk_exe Resolve.exe")
 IfExist, C:\temp\keysuspend.txt
 {
     Goto, resolvecheck
@@ -346,6 +347,7 @@ sizing_doublecheck:
 }
 
 colourwarper_stopcheck:
+if WinActive("ahk_exe Resolve.exe")
 IfExist, C:\temp\keysuspend.txt
 {
     Goto, resolvecheck
@@ -361,6 +363,7 @@ colourwarper_doublecheck:
 }
 
 tracker_stopcheck:
+if WinActive("ahk_exe Resolve.exe")
 IfExist, C:\temp\keysuspend.txt
 {
     Goto, resolvecheck
@@ -376,6 +379,7 @@ tracker_doublecheck:
 }
 
 qualifer_stopcheck:
+if WinActive("ahk_exe Resolve.exe")
 IfExist, C:\temp\keysuspend.txt
 {
     Goto, resolvecheck
@@ -391,6 +395,7 @@ qualifer_doublecheck:
 }
 
 blurtool_stopcheck:
+if WinActive("ahk_exe Resolve.exe")
 IfExist, C:\temp\keysuspend.txt
 {
     Goto, resolvecheck
@@ -406,6 +411,7 @@ blurtool_doublecheck:
 }
 
 window_stopcheck:
+if WinActive("ahk_exe Resolve.exe")
 IfExist, C:\temp\keysuspend.txt
 {
 
