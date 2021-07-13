@@ -1,4 +1,7 @@
 # AUTOHOTKEY_SCRIPTS
+## About
+These scripts are things that I have made using autohotkey in order to expand the ability of my tangent elements panel and make certain repetitive operations in grading faster
+This is my setup 
 
 ## User Guide
 All the scripts in this folder are designed for a 4096 x 2160 screen resolution
