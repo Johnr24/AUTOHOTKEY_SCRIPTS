@@ -120,7 +120,9 @@ frame := 2945
 stabgo := 3000
 t_lower := 1566
 stab_lower := 1743
-
+cameralock := 1996
+stablowest := 2090
+stab_zoom := 2122
 ;shapes window
 square_w := 1796
 circle_w := 1841

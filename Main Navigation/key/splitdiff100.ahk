@@ -14,7 +14,7 @@ SplitPath, A_ScriptName, , , , thisscriptname
 #Include, C:\AUTOHOTKEY_SCRIPTS\Main Navigation\middletoolsconfig.ahk
 
 FileAppend, (on), C:\temp\keysuspend.txt
-Sleep, 300
+Sleep, 150
 
 
 bigcunt:
