@@ -86,5 +86,6 @@ Send 0.50 {Enter}
 MouseMove %supermacro%, %tby%
 SendEvent {Click, %supermacro%, %tby%}
 MouseMove %x%, %y%
+Sleep, 300
 FileDelete, C:\temp\keysuspend.txt
 exitapp

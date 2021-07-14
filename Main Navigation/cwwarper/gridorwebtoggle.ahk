@@ -22,7 +22,9 @@ IfEqual, webtoggle, 0x7C7C7C
     MouseGetPos x, y
     MouseMove, %cw_grid%, %cw_selectmenu%
     SendEvent {Click , %cw_grid%, %cw_selectmenu%}
-    
+    FileAppend, (on), C:\temp\cw\grids.txt
+    FileDelete, C:\temp\cw\web.txt
+
     MouseMove %x%, %y%
     Exit
 }
@@ -31,6 +33,8 @@ Else   ;very important
     MouseGetPos x, y
     MouseMove, %cw_web%, %cw_selectmenu%
     SendEvent {Click , %cw_web%, %cw_selectmenu%}
+    FileAppend, (on), C:\temp\cw\web.txt
+    FileDelete, C:\temp\cw\grids.txt
     MouseMove %x%, %y%
     Exit
 }

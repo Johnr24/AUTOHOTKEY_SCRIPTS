@@ -14,7 +14,7 @@ SplitPath, A_ScriptName, , , , thisscriptname
 #Include, C:\AUTOHOTKEY_SCRIPTS\Main Navigation\middletoolsconfig.ahk
 
 FileAppend, (on), C:\temp\keysuspend.txt
-
+Sleep, 300
 
 bigcunt:
 IfExist, C:\temp\mt\curves.txt
@@ -95,5 +95,6 @@ Sleep 10
 MouseMove %supermacro%, %tby%
 SendEvent {Click, %supermacro%, %tby%}
 MouseMove %x%, %y%
+Sleep, 300
 FileDelete, C:\temp\keysuspend.txt
 exitapp

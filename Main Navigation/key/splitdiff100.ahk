@@ -14,6 +14,7 @@ SplitPath, A_ScriptName, , , , thisscriptname
 #Include, C:\AUTOHOTKEY_SCRIPTS\Main Navigation\middletoolsconfig.ahk
 
 FileAppend, (on), C:\temp\keysuspend.txt
+Sleep, 300
 
 
 bigcunt:
@@ -86,5 +87,6 @@ Send 1.00 {Enter}
 MouseMove %supermacro%, %tby%
 SendEvent {Click, %supermacro%, %tby%}
 MouseMove %x%, %y%
+Sleep, 300
 FileDelete, C:\temp\keysuspend.txt
 exitapp
