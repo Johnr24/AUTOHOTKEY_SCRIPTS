@@ -17,11 +17,11 @@ resolvecheck:
     PixelGetColor, colourtabcheck, %colourpage%, %pagebar%
     IfEqual, colourtabcheck, 0x000000
     {
-        Goto, curvescheck
+        Goto, keysuspend_colour
     }
     Else
         {
-            Goto, editcheck
+            Goto, keysuspend_edit
         }
 if not WinActive("ahk_exe Resolve.exe")
     Goto, resolvecheck
@@ -204,7 +204,7 @@ if WinActive("ahk_exe Resolve.exe")
     }
     Else
     {
-Goto, keywindowchecker
+        Goto, keywindowchecker
     }
 
 
@@ -225,7 +225,9 @@ if WinActive("ahk_exe Resolve.exe")
     PixelGetColor, keywindow_c, %keytool%, %tby%
     IfEqual, keywindow_c, 0xFFFFFF
     {
-        Goto, keystopcheck
+            Run, C:\AUTOHOTKEY_SCRIPTS\exe\keywindowactive.exe
+            FileAppend, on, C:\temp\mt\keywindow.txt
+            Goto, keywindowcheckeroff
     }
     Else
     {
@@ -245,20 +247,6 @@ Else
     FileDelete, C:\temp\mt\keywindow.txt
     Goto, resolvecheck
 }
-
-keystopcheck:
-IfExist, C:\temp\keysuspend.txt
-{
-
-    Goto, resolvecheck
-}
-Else
-Goto, keywindowdoublecheck
-keywindowdoublecheck:
-    if WinActive("ahk_exe Resolve.exe")
-            Run, C:\AUTOHOTKEY_SCRIPTS\exe\keywindowactive.exe
-            FileAppend, on, C:\temp\mt\keywindow.txt
-            Goto, keywindowcheckeroff
 
 sizingchecker:
 if WinActive("ahk_exe Resolve.exe")
@@ -314,3 +302,23 @@ Else
 }
 
 
+keysuspend_colour:
+IfExist, C:\temp\keysuspend.txt
+{    
+    Goto, keysuspend_colour
+}
+Else
+{
+    Goto, curvescheck
+}
+
+
+keysuspend_edit:
+IfExist, C:\temp\keysuspend.txt
+{    
+    Goto, keysuspend_edit
+}
+Else
+{
+    Goto, editcheck
+}
