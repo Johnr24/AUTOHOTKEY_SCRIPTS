@@ -23,10 +23,10 @@ magicmask causing flip up
 ### Done
 
 
-* ~~~HDR Range Arrows - Need to make this dynamic using the pixel search function~~
+* ~~HDR Range Arrows - Need to make this dynamic using the pixel search function~~
 
-* ~~~~Split the difference functions maybe add disable function into other tabs * if possible? - implement keystop check loop on allinscanner~~~
+* ~~Split the difference functions maybe add disable function into other tabs * if possible? - implement keystop check loop on allinscanner~~
 * ~~CMY Printy Lights on main page~~
 
-* ~~~STABLISE KEY NOT WORKING~~~
+* ~~STABLISE KEY NOT WORKING~~
 * ~~add camera lock button~~
