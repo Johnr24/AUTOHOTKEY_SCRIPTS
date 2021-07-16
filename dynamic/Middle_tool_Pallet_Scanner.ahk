@@ -33,6 +33,7 @@ if WinActive("ahk_exe Resolve.exe")
     {
         Run, C:\AUTOHOTKEY_SCRIPTS\exe\curvesactive.exe
         FileAppend, on, C:\temp\mt\curves.txt
+        WinActivate, ahk_exe Resolve.exe
         Goto, curvescheckeroff
     }
 Else
@@ -60,6 +61,7 @@ if WinActive("ahk_exe Resolve.exe")
     {
         Run, C:\AUTOHOTKEY_SCRIPTS\exe\cwactive.exe
         FileAppend, on, C:\temp\mt\colourwarper.txt
+        WinActivate, ahk_exe Resolve.exe
         Goto, colourwarpercheckeroff
     }
     Else
@@ -88,6 +90,7 @@ if WinActive("ahk_exe Resolve.exe")
     {
         Run, C:\AUTOHOTKEY_SCRIPTS\exe\keyactive.exe
         FileAppend, on, C:\temp\mt\keyer.txt
+        WinActivate, ahk_exe Resolve.exe
         Goto, qualifercheckeroff
     }
     Else
@@ -115,6 +118,7 @@ if WinActive("ahk_exe Resolve.exe")
     {
         Run, C:\AUTOHOTKEY_SCRIPTS\exe\windowactive.exe
         FileAppend, on, C:\temp\mt\window.txt
+        WinActivate, ahk_exe Resolve.exe
         Goto, windowcheckeroff
     }
     Else
@@ -143,6 +147,7 @@ if WinActive("ahk_exe Resolve.exe")
     {
         Run, C:\AUTOHOTKEY_SCRIPTS\exe\trackeractive.exe
         FileAppend, on, C:\temp\mt\tracker.txt
+        WinActivate, ahk_exe Resolve.exe
         Goto, trackercheckeroff
     }
     Else
@@ -172,6 +177,7 @@ if WinActive("ahk_exe Resolve.exe")
     {
         Run, C:\AUTOHOTKEY_SCRIPTS\exe\magicmaskactive.exe
         FileAppend, on, C:\temp\mt\magicmask.txt
+        WinActivate, ahk_exe Resolve.exe
         Goto, magicmaskcheckeroff
     }
     Else
@@ -200,6 +206,7 @@ if WinActive("ahk_exe Resolve.exe")
     {
         Run, C:\AUTOHOTKEY_SCRIPTS\exe\blurtoolactive.exe
         FileAppend, on, C:\temp\mt\.txt
+        WinActivate, ahk_exe Resolve.exe
         Goto, blurtoolcheckeroff
     }
     Else
@@ -255,7 +262,7 @@ if WinActive("ahk_exe Resolve.exe")
     {
         Run, C:\AUTOHOTKEY_SCRIPTS\exe\sizingactive.exe
         FileAppend, on, C:\temp\mt\sizing.txt
-
+        WinActivate, ahk_exe Resolve.exe
         Goto, sizingchecker2
     }
     Else
@@ -282,6 +289,7 @@ editcheck:
     IfEqual, edit_c, 0x000000
     {
         Run, C:\AUTOHOTKEY_SCRIPTS\exe\editactive.exe
+        WinActivate, ahk_exe Resolve.exe
         Goto, editcheckhold
     }
     Else
