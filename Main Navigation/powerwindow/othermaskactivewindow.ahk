@@ -15,7 +15,7 @@ SplitPath, A_ScriptName, , , , thisscriptname
 PixelSearch, Px, Py, 2000, 1750, 2000, 2100, 0x212121, 0, Fast
 
 
-2Px := Px + 730
+2Px := Px + 715
 2Py := Py + 25
 
 MouseMove %2Px%, %2Py%
