@@ -8,7 +8,7 @@ These StreamDecks change automatically using AutoHotKey scripts that scan Davinc
 
 ## User Guide
 All the scripts in this folder are designed for a 4096 x 2160 screen resolution
-you should be able to most of the values for the scripts by editing the file found at 
+you should be able to change most of the values for the scripts by editing the file found at 
 ```
 C:\AUTOHOTKEYSCRIPTS\Main Navigation\middletoolsconfig.ahk
 ```
