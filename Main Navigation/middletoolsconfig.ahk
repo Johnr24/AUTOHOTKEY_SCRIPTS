@@ -49,13 +49,13 @@ keyoutputgain := 1913
 
 hdr_dot_x :=  1415
 ;HDR Tools Window
-leftarrow_x1 := 682
+leftarrow_x1 := 663
 leftarrow_x2 := 710
 leftarrow_y1 := 1733
 leftarrow_y2 := 1757
 
 rightarrow_x1 := 822
-rightarrow_x2 := 853
+rightarrow_x2 := 884
 rightarrow_y1 := 1733
 rightarrow_y2 := 1757
 
