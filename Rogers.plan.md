@@ -1,11 +1,11 @@
 # Todo:
 
 ### Streamdeck Profiles
-Add ones to folder that you can add
-Fix Printer Points window
-    No main menu
-    bind to primary menu on left hand
-de-bind curves and apply Muti function profile switch on streamdeck
+* Add ones to folder that you can add
+* Fix Printer Points window
+*    No main menu
+*    bind to primary menu on left hand
+* de-bind curves and apply Muti function profile switch on   streamdeck
 
 
 * Add Extra Colour Warper Tools
@@ -14,10 +14,10 @@ de-bind curves and apply Muti function profile switch on streamdeck
 
 ####errors???
 
-~~Gridsmode is stuck grids.txt is loaded in temp?~~
-~~KeyoutputInvert Y Wrong~~
+* ~~Gridsmode is stuck grids.txt is loaded in temp?~~
+* ~~KeyoutputInvert Y Wrong~~
 
-magicmask causing flip up
+* magicmask causing flip up
 
 
 ### Done
