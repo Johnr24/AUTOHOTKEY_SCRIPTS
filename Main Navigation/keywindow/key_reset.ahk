@@ -14,7 +14,7 @@ SplitPath, A_ScriptName, , , , thisscriptname
 
 #Include, C:\AUTOHOTKEY_SCRIPTS\Main Navigation\middletoolsconfig.ahk
 MouseGetPos x, y 
-MouseMove, %mt_reset%, %mt_reset_y%
-SendEvent {Click, %mt_reset%, %mt_reset_y%}
+MouseMove, %mt_reset%, %mm_menu_y%
+SendEvent {Click, %mt_reset%, %mm_menu_y%}
 MouseMove %x%, %y%
 ExitApp, 

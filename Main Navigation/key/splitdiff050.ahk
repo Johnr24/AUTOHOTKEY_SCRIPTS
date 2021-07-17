@@ -70,10 +70,9 @@ IfExist, C:\temp\mt\blur.txt
     supermacro = %blurtool%
     Goto, mod
 }
+Else
+    Goto, mod
 
-
-
-Goto, bigcunt
 
 mod:
 MouseGetPos x, y

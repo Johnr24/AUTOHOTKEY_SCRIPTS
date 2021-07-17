@@ -205,7 +205,7 @@ if WinActive("ahk_exe Resolve.exe")
     IfEqual, blurtool_c, 0xFFFFFF
     {
         Run, C:\AUTOHOTKEY_SCRIPTS\exe\blurtoolactive.exe
-        FileAppend, on, C:\temp\mt\.txt
+        FileAppend, on, C:\temp\mt\blur.txt
         WinActivate, ahk_exe Resolve.exe
         Goto, blurtoolcheckeroff
     }
@@ -224,7 +224,7 @@ IfEqual, blurtool_c, 0xFFFFFF
 }
 Else
 {
-    FileDelete, C:\temp\mt\.txt
+    FileDelete, C:\temp\mt\blur.txt
     Goto, resolvecheck
 }
 keywindowchecker:
