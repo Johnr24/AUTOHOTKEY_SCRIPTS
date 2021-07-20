@@ -14,6 +14,7 @@ SplitPath, A_ScriptName, , , , thisscriptname
 
 MsgBox, 4, , blur  Continue?, .001
 IfMsgBox Timeout
+   WinActivate, ahk_exe Resolve.exe
    ExitApp
-else IfMsgBox No
+IfMsgBox No
     return
