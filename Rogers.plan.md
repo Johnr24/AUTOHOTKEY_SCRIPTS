@@ -13,6 +13,8 @@
 
 
 ####errors???
+* need to make an edit window scanner or rethink how this is intergrated varrible call?
+
 
 * ~~Gridsmode is stuck grids.txt is loaded in temp?~~
 * ~~KeyoutputInvert Y Wrong~~

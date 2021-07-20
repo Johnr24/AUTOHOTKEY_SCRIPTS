@@ -19,14 +19,20 @@ if WinActive("ahk_exe Resolve.exe")
     PixelGetColor, colourtabcheck, %colourpage%, %pagebar%
     IfEqual, colourtabcheck, 0x000000
     {
-    Goto, keysuspend_colour
+        Goto, keysuspend_colour
     }
     Else
     {
-    Goto, resolvecheck
+        PixelGetColor, editpagecheck, %editpage%, %pagebar%
+        IfEqual, editpagecheck, 0x000000
+        {
+            Goto, keysuspend_edit
+        }
+        Else
+        {
+            Goto, resolvecheck
+        }
     }
-
-
 curvescheck:
 if WinActive("ahk_exe Resolve.exe")
     PixelGetColor, curves_c, %curves%, %tby%
