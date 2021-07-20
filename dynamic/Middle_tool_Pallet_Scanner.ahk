@@ -4,7 +4,7 @@ SendMode Input ; Forces Send and SendRaw to use SendInput buffering for speed.
 SetTitleMatchMode, 3 ; A window's title must exactly match WinTitle to be a match.
 SetWorkingDir, %A_ScriptDir%
 SplitPath, A_ScriptName, , , , thisscriptname
-#MaxThreadsPerHotkey, 1 ; no re-entrant hotkey handling
+#MaxThreadsPerHotkey, 2 ; no re-entrant hotkey handling
   ; Recommended for performance and compatibility with future AutoHotkey releases.
 ; #Warn  ; Enable warnings to assist with detecting common errors.
 #Include, C:\AUTOHOTKEY_SCRIPTS\Main Navigation\middletoolsconfig.ahk
@@ -12,19 +12,20 @@ SplitPath, A_ScriptName, , , , thisscriptname
 CoordMode, Pixel
 
 
-resolvecheck: 
-    if WinActive("ahk_exe Resolve.exe")
+resolvecheck:
+if not WinActive("ahk_exe Resolve.exe")
+    Goto, resolvecheck
+if WinActive("ahk_exe Resolve.exe")
     PixelGetColor, colourtabcheck, %colourpage%, %pagebar%
     IfEqual, colourtabcheck, 0x000000
     {
-        Goto, keysuspend_colour
+    Goto, keysuspend_colour
     }
     Else
-        {
-            Goto, keysuspend_edit
-        }
-if not WinActive("ahk_exe Resolve.exe")
+    {
     Goto, resolvecheck
+    }
+
 
 curvescheck:
 if WinActive("ahk_exe Resolve.exe")
@@ -267,7 +268,7 @@ if WinActive("ahk_exe Resolve.exe")
     }
     Else
     {
-Goto, resolvecheck ;CHANGE THIS TO EXPAND 
+Goto, editcheck 
     }
 
 
@@ -285,6 +286,7 @@ Else
 }
     
 editcheck:
+if WinActive("ahk_exe Resolve.exe")
     PixelGetColor, edit_c, 1949, 2136
     IfEqual, edit_c, 0x000000
     {
@@ -294,15 +296,16 @@ editcheck:
     }
     Else
     {
-Goto, resolvecheck
+Goto, resolvecheck ;CHANGE THIS TO EXPAND
     }
 
 
 editcheckhold:
+if WinActive("ahk_exe Resolve.exe")
     PixelGetColor, edit_c, 1949, 2136
 IfEqual, edit_c, 0x000000
 {
-    Goto, editcheckhold
+    Goto, editcheckhold  
 }
 Else
 {
@@ -311,12 +314,14 @@ Else
 
 
 keysuspend_colour:
+WinActivate, ahk_exe Resolve.exe
 IfExist, C:\temp\keysuspend.txt
 {    
     Goto, keysuspend_colour
 }
 Else
 {
+    WinActivate, ahk_exe Resolve.exe
     Goto, curvescheck
 }
 
