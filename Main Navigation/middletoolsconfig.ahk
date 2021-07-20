@@ -138,6 +138,7 @@ bigbar_y := 41
 Timeline := 3619
 mt_reset := 3058
 mt_reset_y := 1547
+
 ;FileAppend, %webtoggle% , C:\temp\fuck.txt
 pagebar := 2130
 editpage := 1949

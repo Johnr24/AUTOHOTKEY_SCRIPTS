@@ -12,7 +12,6 @@ SplitPath, A_ScriptName, , , , thisscriptname
 ; SetKeyDelay, -1, -1 ; Remove short delay done automatically after every keystroke sent by Send or ControlSend
 ; SetMouseDelay, -1 ; Remove short delay done automatically after Click and MouseMove/Click/Drag
 WinActivate, ahk_exe Resolve.exe
-
 MsgBox, 4, , keyer  Continue?, .001
 IfMsgBox Timeout
    WinActivate, ahk_exe Resolve.exe
