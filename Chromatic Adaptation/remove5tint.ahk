@@ -18,16 +18,17 @@ SplitPath, A_ScriptName, , , , thisscriptname
 OFXsearch := 000000
 PixelGetColor, OFXsearch, 4025, 100  
 FileAppend, %OFXsearch%, C:\temp\OFXsearch.txt]
-
+OFXsearch:
 If (OFXsearch = 0x212121) 
 {
     Mousemove, 4040, 70
     sleep 10
     SendEvent, {Click, 4040, 70}
-    sleep 30    
+    sleep 30
+    Goto, mod
 }
 
-
+mod:
 IfExist, C:\temp\CA_target.txt ;target and source labels rong way round position correct
 {
     oCB := ClipboardAll ; save clipboard contents
