@@ -103,7 +103,9 @@ edit_s := 2225
 flip_y := 1923
 v_flip := 2151
 h_flip := 2188
-
+size_reset_y := 1740
+size_reset_x := 2528
+blanking_reset_x := 3044
 ;tracker window
 tsize_y := 1707
 wtrack := 2245
