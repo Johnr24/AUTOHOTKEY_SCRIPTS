@@ -7,9 +7,7 @@
 
 
 
-* add reset function for sizing 
 
-* Windows Key 
 
 
 
@@ -38,3 +36,8 @@
 * Fix Printer Points window
 *    No main menu
 *    bind to primary menu on left hand
+
+* add reset function for sizing 
+
+* Windows Key
+* 
