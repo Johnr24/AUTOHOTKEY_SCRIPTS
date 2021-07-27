@@ -14,6 +14,6 @@ SplitPath, A_ScriptName, , , , thisscriptname
 WinActivate, ahk_exe Resolve.exe
 Gui, New
 Gui, Show, X2 Y2 W2 H2, Test Window
-Sleep 0.001
+;Sleep 0.001
 WinActivate, ahk_exe Resolve.exe
 ExitApp

@@ -1,10 +1,7 @@
 # Todo:
 
 ### Streamdeck Profiles
-* Add ones to folder that you can add
-* Fix Printer Points window
-*    No main menu
-*    bind to primary menu on left hand
+
 * Add Extra Colour Warper Tools
 
 
@@ -36,3 +33,8 @@
 * need to make an edit window scanner or rethink how this is intergrated varrible call?
 
 * magicmask causing flip up* Chromatic Adaption needs to be grouped and take into account the closing of the serach bar and then the running of the script. Rather than just closing the search bar and quiting
+
+* Add ones to folder that you can add
+* Fix Printer Points window
+*    No main menu
+*    bind to primary menu on left hand
