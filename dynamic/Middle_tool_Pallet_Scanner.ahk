@@ -64,7 +64,7 @@ Else
 colourwarpercheck:
 if WinActive("ahk_exe Resolve.exe")
     PixelGetColor, colourwarper_c, %colourwarper%, %tby%
-    IfEqual, colourwarper_c, 0x6E6E6E
+    IfEqual, colourwarper_c, 0xD8D8D8
     {
         Run, C:\AUTOHOTKEY_SCRIPTS\exe\cwactive.exe
         FileAppend, on, C:\temp\mt\colourwarper.txt
@@ -80,7 +80,7 @@ Goto, qualiferchecker
 colourwarpercheckeroff:
 if WinActive("ahk_exe Resolve.exe")
     PixelGetColor, colourwarper_c, %colourwarper%, %tby%
-IfEqual, colourwarper_c, 0x6E6E6E
+IfEqual, colourwarper_c, 0xD8D8D8
 {
     Goto, colourwarpercheckeroff
 }
@@ -120,8 +120,8 @@ Else
 
 windowchecker:
 if WinActive("ahk_exe Resolve.exe")
-    PixelGetColor, powerwindow_C, %powerwindow%, %tby%
-    IfEqual, powerwindow_C, 0x404040
+    PixelGetColor, powerwindow_C, %powerwindow%, 1667
+    IfEqual, powerwindow_C, 0x666666
     {
         Run, C:\AUTOHOTKEY_SCRIPTS\exe\windowactive.exe
         FileAppend, on, C:\temp\mt\window.txt
@@ -136,8 +136,8 @@ Goto, trackerchecker
 
 windowcheckeroff:
 if WinActive("ahk_exe Resolve.exe")
-    PixelGetColor, powerwindow_C, %powerwindow%, %tby%
-IfEqual, powerwindow_C, 0x404040
+    PixelGetColor, powerwindow_C, %powerwindow%, 1667
+IfEqual, powerwindow_C, 0x666666
 {
     Goto, windowcheckeroff
 }
@@ -150,7 +150,7 @@ Else
 trackerchecker:
 if WinActive("ahk_exe Resolve.exe")
     PixelGetColor, tracker_c, %tracker%, 1667
-    IfEqual, tracker_c, 0xFFFFFF
+    IfEqual, tracker_c, 0x404040
     {
         Run, C:\AUTOHOTKEY_SCRIPTS\exe\trackeractive.exe
         FileAppend, on, C:\temp\mt\tracker.txt
@@ -166,7 +166,7 @@ Goto, magicmaskchecker
 trackercheckeroff:
 if WinActive("ahk_exe Resolve.exe")
     PixelGetColor, tracker_c, %tracker%, 1667
-IfEqual, tracker_c, 0xFFFFFF
+IfEqual, tracker_c, 0x404040
 {
     Goto, trackercheckeroff
 }
@@ -180,7 +180,7 @@ Else
 magicmaskchecker:
 if WinActive("ahk_exe Resolve.exe")
     PixelGetColor, magicmask_c, %magicmask%, %tby%
-    IfEqual, magicmask_c, 0x626262
+    IfEqual, magicmask_c, 0xFFFFFF
     {
         Run, C:\AUTOHOTKEY_SCRIPTS\exe\magicmaskactive.exe
         FileAppend, on, C:\temp\mt\magicmask.txt
@@ -196,7 +196,7 @@ Goto, blurtoolchecker
 magicmaskcheckeroff:
 if WinActive("ahk_exe Resolve.exe")
     PixelGetColor, magicmask_c, %magicmask%, %tby%
-IfEqual, magicmask_c, 0x626262
+IfEqual, magicmask_c, 0xFFFFFF
 {
     Goto, magicmaskcheckeroff
 }

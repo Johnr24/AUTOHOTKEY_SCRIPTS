@@ -3,14 +3,8 @@
 ### Streamdeck Profiles
 
 * Add Extra Colour Warper Tools
-
-
-
-
-
-
-
-
+* change streamdeck HDR temp and tint keys
+add ctrl+H highlight key to a few profiles
 
 # Done
 
@@ -28,7 +22,7 @@
 * Hide .exes when launched using winset command
     actually done from scratch no longer using annoying mesagge boxes
 * de-bind curves and apply Muti function profile switch on   streamdeck
-* need to make an edit window scanner or rethink how this is intergrated varrible call?
+* need to make an edit window scanner or rethink how this is integrated varrible call?
 
 * magicmask causing flip up* Chromatic Adaption needs to be grouped and take into account the closing of the serach bar and then the running of the script. Rather than just closing the search bar and quiting
 

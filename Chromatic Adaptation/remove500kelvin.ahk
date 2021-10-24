@@ -24,7 +24,7 @@ If (OFXsearch = 0x212121)
     Mousemove, 4040, 70
     sleep 10
     SendEvent, {Click, 4040, 70}
-    sleep 30
+    sleep 60
     Goto, mod
 }
 

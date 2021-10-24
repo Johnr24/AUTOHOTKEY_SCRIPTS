@@ -9,11 +9,11 @@ motion_effects := 331
 ;space
 ;space
 curves := 1824
-colourwarper := 1892
+colourwarper := 1893
 qualifer := 1967
-powerwindow := 2032
-tracker := 2103
-magicmask := 2178
+powerwindow := 2025
+tracker := 2104
+magicmask := 2175
 blurtool := 2238
 keytool := 2310
 sizing := 2382
@@ -26,13 +26,13 @@ info := 4067
 ;space
 ;space
 ;space
-cya := 1707 
-customcurve := 2245
-huevshue := 2265
-huevssat := 2285
-huevslum := 2305
-lumvssat := 2325
-satvssat := 2337
+cya := 1710 
+customcurve := 2770
+huevshue := 2800
+huevssat := 2830
+huevslum := 2860
+lumvssat := 2885
+satvssat := 2915
 satvslum := 2359
 ;space
 lowernavbar_y := 1707
@@ -107,12 +107,13 @@ size_reset_y := 1740
 size_reset_x := 2528
 blanking_reset_x := 3044
 ;tracker window
-tsize_y := 1707
-wtrack := 2245
-stabtrack := 2260
-fx_track := 2281
+tsize_y := 1709
+wtrack := 2922
+stabtrack := 2952
+fx_track := 2976
 t_low := 1743
 trackbck := 1562
+track_fwd_bck := 1655
 trackb1 := 1585
 pause := 1625
 trackfwd := 1650
@@ -186,12 +187,12 @@ mm_features := 1662
 
 mm_fftracked := 2212
 mm_lftracked := 2381
-mm_trackbackoneframe := 2243
-mm_trackforwardoneframe := 2357
-mm_trackforward := 2327
-mm_trackbackward := 2274
-mm_trackstop := 2300
-
+mm_trackbackoneframe := 2230
+mm_trackforwardoneframe := 2370
+mm_trackforward := 2340
+mm_trackbackward := 2260
+mm_trackstop := 2285
+mm_track_fwd_back : = 2310
 mm_plus := 2940
 mm_minus := 2972
 
