@@ -192,7 +192,7 @@ mm_trackforwardoneframe := 2370
 mm_trackforward := 2340
 mm_trackbackward := 2260
 mm_trackstop := 2285
-mm_track_fwd_back : = 2310
+mm_track_fwd_back := 2310
 mm_plus := 2940
 mm_minus := 2972
 
@@ -201,3 +201,19 @@ mm_show := 3042
 
 mm_p_reset_x := 3053
 mm_p_reset_y := 1782
+
+
+qual_hsl := 2930
+qual_RGB := 2960
+qual_lum := 2990
+qual_3D := 3015
+
+
+qual_select_y := 1745
+qual_dropper := 1571
+qual_minus := 1596
+qual_plus := 1626
+qual_soft := 2230
+qual_flat := 2290
+qual_tight := 2370
+qual_luma := 2440

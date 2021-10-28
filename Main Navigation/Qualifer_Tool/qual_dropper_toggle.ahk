@@ -13,7 +13,43 @@ SplitPath, A_ScriptName, , , , thisscriptname
 ; SetMouseDelay, -1 ; Remove short delay done automatically after Click and MouseMove/Click/Drag
 #Include, C:\AUTOHOTKEY_SCRIPTS\Main Navigation\middletoolsconfig.ahk
 
-CoordMode, Pixel
-    PixelGetColor, powerwindow_C, %qual_plus%, %qual_select_y%
-    FileAppend,  %powerwindow_C%, C:\Temp\logger2.txt
-    Exit
+PixelGetColor, droppercolour, %qual_dropper%, %qual_select_y% 
+PixelGetColor, qualpluscolour, %qual_plus%, %qual_select_y% 
+
+qual_droppercheck:
+IfEqual, droppercolour, 0xFFFFFF   
+{
+    Goto, clickminus
+}
+Else
+{
+    Goto, clickpluscheck
+}
+
+clickpluscheck:
+IfEqual, qualpluscolour, 0xFFFFFF
+{
+    Goto, clickminus
+}
+Else
+{
+    Goto, clickplus
+}
+
+clickminus:
+{
+    MouseGetPos x, y 
+    MouseMove, %qual_minus%, %qual_select_y%
+    SendEvent {Click, %qual_minus%, %qual_select_y%}
+    MouseMove %x%, %y%
+    ExitApp, 
+}
+
+clickplus:
+{
+    MouseGetPos x, y 
+    MouseMove, %qual_plus%, %qual_select_y%
+    SendEvent {Click, %qual_plus%, %qual_select_y%}
+    MouseMove %x%, %y%
+    ExitApp, 
+}

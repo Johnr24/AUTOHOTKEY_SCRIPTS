@@ -80,7 +80,7 @@ mod:
 MouseGetPos x, y
 MouseMove %keytool%, %tby%
 SendEvent {Click, %keytool%, %tby%}
-Sleep 10
+Sleep 50
 SendEvent {Click, %1stcollum%, %keyoutputgain%}
 SendEvent {Click, %1stcollum%, %keyoutputgain%}
 Send 1.00 {Enter}

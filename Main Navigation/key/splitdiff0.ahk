@@ -12,7 +12,7 @@ SplitPath, A_ScriptName, , , , thisscriptname
 ; SetKeyDelay, -1, -1 ; Remove short delay done automatically after every keystroke sent by Send or ControlSend
 ; SetMouseDelay, -1 ; Remove short delay done automatically after Click and MouseMove/Click/Drag
 #Include, C:\AUTOHOTKEY_SCRIPTS\Main Navigation\middletoolsconfig.ahk
-
+FileDelete, C:\temp\keysuspend.txt
 FileAppend, (on), C:\temp\keysuspend.txt
 Sleep, 150
 
@@ -80,7 +80,7 @@ mod:
 MouseGetPos x, y
 MouseMove %keytool%, %tby%
 SendEvent {Click, %keytool%, %tby%}
-Sleep 10
+Sleep 50
 SendEvent {Click, %1stcollum%, %keyoutputgain%}
 SendEvent {Click, %1stcollum%, %keyoutputgain%}
 Send 0.00 {Enter}
