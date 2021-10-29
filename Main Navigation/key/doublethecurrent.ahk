@@ -83,7 +83,7 @@ SendEvent {Click, %keytool%, %tby%}
 Sleep 50
 SendEvent {Click, %1stcollum%, %keyoutputgain%}
 SendEvent {Click, %1stcollum%, %keyoutputgain%}
-Sleep 4
+Sleep 50
 SendEvent, ^c 
 ClipWait,1
 
