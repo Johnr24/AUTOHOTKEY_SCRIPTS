@@ -154,7 +154,7 @@ maskinvert_x := 3007
 maskotherthing_x := 3037
 
 keyoutput_y :=  1873
-
+keyoutput_x := 3043
 qualifer_y := 1965
 
 ;blurtool

@@ -81,10 +81,10 @@ mod:
 MouseGetPos x, y
 MouseMove %keytool%, %tby%
 SendEvent {Click, %keytool%, %tby%}
-Sleep 50
+Sleep 300
 SendEvent {Click, %1stcollum%, %keyoutputgain%}
 SendEvent {Click, %1stcollum%, %keyoutputgain%}
-Sleep 50
+Sleep 300
 SendEvent, ^c 
 ClipWait,1
 
@@ -93,7 +93,7 @@ clipboard *= .5
 SendEvent %clipboard% 
 Clipboard := oCB ; return original Clipboard contents return
 Send, {Enter}
-Sleep 50
+Sleep 300
 MouseMove %supermacro%, %tby%
 SendEvent {Click, %supermacro%, %tby%}
 MouseMove %x%, %y%
