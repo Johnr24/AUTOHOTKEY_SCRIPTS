@@ -1,3 +1,4 @@
+main1:
 #SingleInstance, Force
 #KeyHistory, 0
 SetBatchLines, -1
@@ -25,7 +26,8 @@ If (OFXsearch = 0x212121)
     sleep 10
     SendEvent, {Click, 4040, 70}
     sleep 30
-    Goto, mod
+    Goto, main1
+
 }
 
 mod:

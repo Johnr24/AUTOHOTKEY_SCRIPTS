@@ -14,9 +14,6 @@ SplitPath, A_ScriptName, , , , thisscriptname
 #Include, C:\AUTOHOTKEY_SCRIPTS\Main Navigation\middletoolsconfig.ahk
 FileDelete, C:\temp\keysuspend.txt
 FileAppend, (on), C:\temp\keysuspend.txt
-Sleep, 150
-
-
 bigcunt:
 IfExist, C:\temp\mt\curves.txt
 {
@@ -71,10 +68,8 @@ IfExist, C:\temp\mt\blur.txt
     supermacro = %blurtool%
     Goto, mod
 }
-
-
-
-Goto, bigcunt
+Else
+    Goto, mod
 
 mod:
 MouseGetPos x, y
@@ -82,11 +77,9 @@ MouseMove %keytool%, %tby%
 SendEvent {Click, %keytool%, %tby%}
 Sleep 300
 SendEvent {Click, %1stcollum%, %keyoutputgain%}
-SendEvent {Click, %1stcollum%, %keyoutputgain%}
 Send 0.75 {Enter}
 MouseMove %supermacro%, %tby%
+Sleep 300
 SendEvent {Click, %supermacro%, %tby%}
 MouseMove %x%, %y%
-Sleep, 300
-FileDelete, C:\temp\keysuspend.txt
-exitapp
+Sleep 300

@@ -43,7 +43,7 @@ iny := 2090
 
 ;keywindow
 
-1stcollum := 2850
+1stcollum := 2851
 2ndCollum := 3020
 keyoutputgain := 1913
 
@@ -201,7 +201,8 @@ mm_show := 3042
 
 mm_p_reset_x := 3053
 mm_p_reset_y := 1782
-
+mm_blur_radius_x := 2930
+mm_blur_radius_y := 1992
 
 qual_hsl := 2930
 qual_RGB := 2960
