@@ -76,7 +76,6 @@ MouseGetPos x, y
 MouseMove %keytool%, %tby%
 SendEvent {Click, %keytool%, %tby%}
 Sleep 300
-MouseMove %1stcollum%, %keyoutputgain%
 SendEvent {Click, %1stcollum%, %keyoutputgain%}
 Send 0.50 {Enter}
 MouseMove %supermacro%, %tby%
@@ -84,5 +83,3 @@ Sleep 300
 SendEvent {Click, %supermacro%, %tby%}
 MouseMove %x%, %y%
 Sleep 300
-FileDelete, C:\temp\keysuspend.txt
-exitapp

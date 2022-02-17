@@ -35,7 +35,7 @@ if WinActive("ahk_exe Resolve.exe")
     }
 curvescheck:
 if WinActive("ahk_exe Resolve.exe")
-    PixelGetColor, curves_c, %curves%, %tby%
+    PixelGetColor, curves_c, %curves%, %tby_curves%
     IfEqual, curves_c, 0xFBFBFB
     {
         Run, C:\AUTOHOTKEY_SCRIPTS\exe\curvesactive.exe
@@ -50,7 +50,7 @@ Else
 
 curvescheckeroff:
 if WinActive("ahk_exe Resolve.exe")
-    PixelGetColor, curves_c, %curves%, %tby%
+    PixelGetColor, curves_c, %curves%, %tby_curves%
 IfEqual, curves_c, 0xFBFBFB
 {
     Goto, curvescheckeroff

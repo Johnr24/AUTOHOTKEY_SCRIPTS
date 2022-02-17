@@ -1,4 +1,5 @@
 tby := 1665 ;tool bar Y
+tby_curves := 1664
 ;space
 camera_raw := 29
 color_match := 89
@@ -15,7 +16,7 @@ powerwindow := 2025
 tracker := 2104
 magicmask := 2175
 blurtool := 2238
-keytool := 2310
+keytool := 2312
 sizing := 2382
 ;space
 ;space
