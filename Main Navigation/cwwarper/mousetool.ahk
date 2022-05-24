@@ -15,8 +15,6 @@ SplitPath, A_ScriptName, , , , thisscriptname
 #Include, C:\AUTOHOTKEY_SCRIPTS\Main Navigation\middletoolsconfig.ahk
 
 
-FileAppend, %ax% %ay%, C:\temp\outputvars.txt
-
 IfExist, C:\temp\cw\web.txt
     {
     MouseGetPos x, y 
@@ -32,4 +30,4 @@ Else
     SendEvent {Click, %cw_mouse%, %cw_tools_y_2%}
     MouseMove %x%, %y%
     ExitApp
-    }
+    }   
