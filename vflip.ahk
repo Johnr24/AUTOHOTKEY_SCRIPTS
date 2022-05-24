@@ -12,14 +12,9 @@ SplitPath, A_ScriptName, , , , thisscriptname
 ; SetKeyDelay, -1, -1 ; Remove short delay done automatically after every keystroke sent by Send or ControlSend
 ; SetMouseDelay, -1 ; Remove short delay done automatically after Click and MouseMove/Click/Drag
 #Include, C:\AUTOHOTKEY_SCRIPTS\Main Navigation\middletoolsconfig.ahk
-PixelSearch, Px, Py, 2284, 1750, 2284, 2100, 0x212121, 0, Fast
 
-
-
-2Px := Px + 200
-2Py := Py + 25
-
-MouseMove %2Px%, %2Py%
-SendEvent,{Click, %2Px%,%2Py%}
-
-ExitApp
+MouseGetPos x, y
+MouseMove, %v_flip%, %flip_y%
+SendEvent {Click, %v_flip%, %flip_y%}
+MouseMove %x%, %y%
+ExitApp, 

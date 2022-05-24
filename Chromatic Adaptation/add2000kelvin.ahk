@@ -35,9 +35,9 @@ IfExist, C:\temp\CA_target.txt
 {
     oCB := ClipboardAll ; save clipboard contents
     MouseGetPos x, y
-    MouseMove 3983,214
-    SendEvent {Click , 3983, 214}
-    SendEvent {Click , 3985, 214} ; Sends Double Click
+    MouseMove 3729,214
+    SendEvent {Click , 3729, 214}
+    SendEvent {Click , 3729, 214} ; Sends Double Click
     Sleep 4
     SendEvent, ^c 
     ClipWait,1
@@ -56,9 +56,9 @@ IfExist, C:\temp\CA_source.txt
 {
     oCB := ClipboardAll ; save clipboard contents
     MouseGetPos x, y
-    MouseMove 3983,322
-    SendEvent {Click , 3983, 322}
-    SendEvent {Click , 3985, 322} ; Sends Double Click
+    MouseMove 3729,322
+    SendEvent {Click , 3729, 322}
+    SendEvent {Click , 3729, 322} ; Sends Double Click
     Sleep 4
     SendEvent, ^c 
     ClipWait,1

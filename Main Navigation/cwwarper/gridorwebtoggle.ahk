@@ -16,8 +16,7 @@ SplitPath, A_ScriptName, , , , thisscriptname
 
 PixelGetColor, webtoggle, %cw_web%, %cw_selectmenu% 
 
-IfEqual, webtoggle, 0x7C7C7C   
-
+IfEqual, webtoggle, 0xFFFFFF   
 {   
     MouseGetPos x, y
     MouseMove, %cw_grid%, %cw_selectmenu%

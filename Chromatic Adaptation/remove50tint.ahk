@@ -33,9 +33,9 @@ IfExist, C:\temp\CA_target.txt ;target and source labels rong way round position
 {
     oCB := ClipboardAll ; save clipboard contents
     MouseGetPos x, y
-    MouseMove 3983,241  
-    SendEvent {Click , 3983, 241}
-    SendEvent {Click , 3985, 241} ; Sends Double Click
+    MouseMove 3729,241  
+    SendEvent {Click , 3729, 241}
+    SendEvent {Click , 3729, 241} ; Sends Double Click
     Sleep 4
     SendEvent, ^c 
     ClipWait,1
@@ -54,9 +54,9 @@ IfExist, C:\temp\CA_source.txt
 {
     oCB := ClipboardAll ; save clipboard contents
     MouseGetPos x, y
-    MouseMove 3983,350
-    SendEvent {Click , 3983, 350}
-    SendEvent {Click , 3985, 350} ; Sends Double Click
+    MouseMove 3729,350
+    SendEvent {Click , 3729, 350}
+    SendEvent {Click , 3729, 350} ; Sends Double Click
     Sleep 4
     SendEvent, ^c 
     ClipWait,1
