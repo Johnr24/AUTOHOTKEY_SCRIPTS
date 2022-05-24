@@ -9,7 +9,7 @@ rgb_mixer := 271
 motion_effects := 331
 ;space
 ;space
-curves := 1696
+curves := 1699
 colourwarper := 1765
 qualifer := 1838
 powerwindow := 1896

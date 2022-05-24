@@ -15,7 +15,7 @@ SplitPath, A_ScriptName, , , , thisscriptname
 #Include, C:\AUTOHOTKEY_SCRIPTS\HDR MODE\zoneconfig.ahk
 
 CoordMode, Pixel
-    PixelGetColor, tracker_c, %global_orange_x%, %global_orange_y%
+    PixelGetColor, tracker_c, %powerwindow%, %tby%
 
     FileAppend, %tracker_c%, C:/temp/fuck.txt
 

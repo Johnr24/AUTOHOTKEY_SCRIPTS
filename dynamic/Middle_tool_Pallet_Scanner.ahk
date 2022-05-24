@@ -36,7 +36,7 @@ if WinActive("ahk_exe Resolve.exe")
 curvescheck:
 if WinActive("ahk_exe Resolve.exe")
     PixelGetColor, curves_c, %curves%, %tby_curves%
-    IfEqual, curves_c, 0xFBFBFB
+    IfEqual, curves_c, 0x6F6F6F
     {
         Run, C:\AUTOHOTKEY_SCRIPTS\exe\curvesactive.exe
         FileAppend, on, C:\temp\mt\curves.txt
@@ -51,7 +51,7 @@ Else
 curvescheckeroff:
 if WinActive("ahk_exe Resolve.exe")
     PixelGetColor, curves_c, %curves%, %tby_curves%
-IfEqual, curves_c, 0xFBFBFB
+IfEqual, curves_c, 0x6F6F6F
 {
     Goto, curvescheckeroff
 }
@@ -121,7 +121,7 @@ Else
 windowchecker:
 if WinActive("ahk_exe Resolve.exe")
     PixelGetColor, powerwindow_C, %powerwindow%, 1665
-    IfEqual, powerwindow_C, 0x626262
+    IfEqual, powerwindow_C, 0xFBFBFB
     {
         Run, C:\AUTOHOTKEY_SCRIPTS\exe\windowactive.exe
         FileAppend, on, C:\temp\mt\window.txt
@@ -137,7 +137,7 @@ Goto, trackerchecker
 windowcheckeroff:
 if WinActive("ahk_exe Resolve.exe")
     PixelGetColor, powerwindow_C, %powerwindow%, 1665
-IfEqual, powerwindow_C, 0x626262
+IfEqual, powerwindow_C, 0xFBFBFB
 {
     Goto, windowcheckeroff
 }
