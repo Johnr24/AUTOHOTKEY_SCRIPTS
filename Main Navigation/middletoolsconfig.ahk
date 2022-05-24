@@ -9,15 +9,15 @@ rgb_mixer := 271
 motion_effects := 331
 ;space
 ;space
-curves := 1824
-colourwarper := 1893
-qualifer := 1967
-powerwindow := 2025
-tracker := 2104
-magicmask := 2175
-blurtool := 2238
-keytool := 2312
-sizing := 2382
+curves := 1696
+colourwarper := 1765
+qualifer := 1838
+powerwindow := 1896
+tracker := 1975
+magicmask := 2046
+blurtool := 2109
+keytool := 2183
+sizing := 2253
 ;space
 ;space
 ;space
@@ -145,8 +145,8 @@ mt_reset_y := 1547
 
 ;FileAppend, %webtoggle% , C:\temp\fuck.txt
 pagebar := 2130
-editpage := 1949
-colourpage := 2073
+editpage := 1827
+colourpage := 1938
 
 ;key window
 keyinput_y := 1745

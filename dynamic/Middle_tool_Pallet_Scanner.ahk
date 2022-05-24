@@ -120,8 +120,8 @@ Else
 
 windowchecker:
 if WinActive("ahk_exe Resolve.exe")
-    PixelGetColor, powerwindow_C, %powerwindow%, 1667
-    IfEqual, powerwindow_C, 0x666666
+    PixelGetColor, powerwindow_C, %powerwindow%, 1665
+    IfEqual, powerwindow_C, 0x626262
     {
         Run, C:\AUTOHOTKEY_SCRIPTS\exe\windowactive.exe
         FileAppend, on, C:\temp\mt\window.txt
@@ -136,8 +136,8 @@ Goto, trackerchecker
 
 windowcheckeroff:
 if WinActive("ahk_exe Resolve.exe")
-    PixelGetColor, powerwindow_C, %powerwindow%, 1667
-IfEqual, powerwindow_C, 0x666666
+    PixelGetColor, powerwindow_C, %powerwindow%, 1665
+IfEqual, powerwindow_C, 0x626262
 {
     Goto, windowcheckeroff
 }
@@ -149,8 +149,8 @@ Else
 
 trackerchecker:
 if WinActive("ahk_exe Resolve.exe")
-    PixelGetColor, tracker_c, %tracker%, 1667
-    IfEqual, tracker_c, 0x404040
+    PixelGetColor, tracker_c, %tracker%, 1665
+    IfEqual, tracker_c, 0x838383
     {
         Run, C:\AUTOHOTKEY_SCRIPTS\exe\trackeractive.exe
         FileAppend, on, C:\temp\mt\tracker.txt
@@ -165,8 +165,8 @@ Goto, magicmaskchecker
 
 trackercheckeroff:
 if WinActive("ahk_exe Resolve.exe")
-    PixelGetColor, tracker_c, %tracker%, 1667
-IfEqual, tracker_c, 0x404040
+    PixelGetColor, tracker_c, %tracker%, 1665
+IfEqual, tracker_c, 0x838383
 {
     Goto, trackercheckeroff
 }
@@ -209,7 +209,7 @@ Else
 blurtoolchecker:
 if WinActive("ahk_exe Resolve.exe")
     PixelGetColor, blurtool_c, %blurtool%, %tby%
-    IfEqual, blurtool_c, 0xFFFFFF
+    IfEqual, blurtool_c, 0xC3C3C3
     {
         Run, C:\AUTOHOTKEY_SCRIPTS\exe\blurtoolactive.exe
         FileAppend, on, C:\temp\mt\blur.txt
@@ -225,7 +225,7 @@ if WinActive("ahk_exe Resolve.exe")
 blurtoolcheckeroff:
 if WinActive("ahk_exe Resolve.exe")
     PixelGetColor, blurtool_c, %blurtool%, %tby%
-IfEqual, blurtool_c, 0xFFFFFF
+IfEqual, blurtool_c, 0xC3C3C3
 {
     Goto, blurtoolcheckeroff
 }
@@ -293,7 +293,7 @@ Else
     
 editcheck:
 if WinActive("ahk_exe Resolve.exe")
-    PixelGetColor, edit_c, 1949, 2136
+    PixelGetColor, edit_c, 1827, 2136
     IfEqual, edit_c, 0x000000
     {
         Run, C:\AUTOHOTKEY_SCRIPTS\exe\editactive.exe
@@ -308,7 +308,7 @@ Goto, resolvecheck ;CHANGE THIS TO EXPAND
 
 editcheckhold:
 if WinActive("ahk_exe Resolve.exe")
-    PixelGetColor, edit_c, 1949, 2136
+    PixelGetColor, edit_c, 1827, 2136
 IfEqual, edit_c, 0x000000
 {
     Goto, editcheckhold  
