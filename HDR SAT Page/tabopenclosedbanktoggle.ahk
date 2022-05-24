@@ -33,7 +33,7 @@ FileAppend, (on), C:\temp\tabclosed.txt
 
 PixelGetColor,bankedornot, %global_orange_x%, %global_orange_y%
 
-IfEqual, bankedornot, 0xE88A14
+IfEqual, bankedornot, 0x1B8BE3
 {
     FileAppend, (on),C:\temp\notbanked.txt
     FileDelete, C:\temp\banked.txt
@@ -46,18 +46,18 @@ Else
 
 IfExist, C:\temp\tabopen.txt 
 {
-    MouseMove, 3056, 1709
-    SendEvent, {Click, 3056, 1709}
-    MouseMove, 3056, 1829
-    SendEvent, {Click, 3056, 1829}
+    MouseMove, 2860, 1709
+    SendEvent, {Click, 2860, 1709}
+    MouseMove, 2860, 1829
+    SendEvent, {Click, 2860, 1829}
 }
 
 IfExist, C:\temp\tabclosed.txt 
 {
-    MouseMove, 1517, 1709
-    SendEvent, {Click, 1517, 1709}
-    MouseMove, 1517, 1829
-    SendEvent, {Click, 1517, 1829}    
+    MouseMove, 1418, 1709
+    SendEvent, {Click, 1418, 1709}
+    MouseMove, 1418, 1829
+    SendEvent, {Click, 1418, 1829}    
 }
 Else
 PixelGetColor,bankedornot, %global_orange_x%, %global_orange_y%

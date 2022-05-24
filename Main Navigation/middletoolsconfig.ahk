@@ -48,29 +48,29 @@ iny := 2090
 2ndCollum := 3020
 keyoutputgain := 1913
 
-hdr_dot_x :=  1415
+hdr_dot_x :=  1318
 ;HDR Tools Window
-leftarrow_x1 := 663
-leftarrow_x2 := 710
-leftarrow_y1 := 1733
-leftarrow_y2 := 1757
+leftarrow_x1 := 633
+leftarrow_x2 := 633
+leftarrow_y1 := 1746
+leftarrow_y2 := 1746
 
-rightarrow_x1 := 822
-rightarrow_x2 := 884
-rightarrow_y1 := 1733
-rightarrow_y2 := 1757
+rightarrow_x1 := 806
+rightarrow_x2 := 806
+rightarrow_y1 := 1746
+rightarrow_y2 := 1746
 
 
 
 ;bottom tools lower bar 
 hdr_lowertools := 2090
 hdr_temp := 312
-hdr_tint := 472
+hdr_tint := 450
 hdr_hue := 651
 hdr_flare := 1326
 
 ;banked or not orange
-global_orange_x := 1289
+global_orange_x := 1167
 global_orange_y := 1830
 
 ;COLOUR WARPER

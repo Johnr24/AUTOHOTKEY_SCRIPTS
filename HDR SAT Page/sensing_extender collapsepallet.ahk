@@ -23,8 +23,8 @@ PixelGetColor, tabexistance, %hdr_dot_x%,%lowernavbar_y%
 IfEqual, tabexistance, 0x212121   
 {
 MouseGetPos x, y
-MouseMove 2914, %lowernavbar_y%
-SendEvent {Click , 2914, %lowernavbar_y%}
+MouseMove 2722, %lowernavbar_y%
+SendEvent {Click , 2722, %lowernavbar_y%}
 MouseMove %x%, %y%
 FileDelete, C:\temp\tabopen.txt
 FileAppend, (on), C:\temp\tabclosed.txt
@@ -35,8 +35,8 @@ Else
 FileDelete, C:\temp\tabclosed.txt
 FileAppend, (on), C:\temp\tabopen.txt
  MouseGetPos x, y
-   MouseMove 1383, %lowernavbar_y%
-SendEvent {Click , 1383, %lowernavbar_y%}
+   MouseMove 1283, %lowernavbar_y%
+SendEvent {Click , 1283, %lowernavbar_y%}
 MouseMove %x%, %y%
 }
 

@@ -13,9 +13,9 @@ IfExist, C:\temp\hdrones.txt
 {
 MouseGetPos x, y
 oCB := ClipboardAll ; 
-mousemove 1024, 2006
-SendEvent {Click , 1024, 2006}
-SendEvent {Click , 1024, 2006} ; Sends Double Click
+mousemove 1221, 2006
+SendEvent {Click , 1221, 2006}
+SendEvent {Click , 1221, 2006} ; Sends Double Click
 Sleep 1 
 SendEvent, ^c
 ClipWait,1
@@ -31,9 +31,9 @@ IfExist  C:\temp\hdrtwos.txt
 {
 MouseGetPos x, y
 oCB := ClipboardAll ; 
-mousemove 1024, 2006
-SendEvent {Click , 1024, 2006}
-SendEvent {Click , 1024, 2006} ; Sends Double Click
+mousemove 1221, 2006
+SendEvent {Click , 1221, 2006}
+SendEvent {Click , 1221, 2006} ; Sends Double Click
 Sleep 1
 SendEvent, ^c
 ClipWait,1
@@ -49,9 +49,9 @@ IfExist, C:\temp\hdrfives.txt
 {
     MouseGetPos x, y
 oCB := ClipboardAll ; 
-mousemove 1024, 2006
-SendEvent {Click , 1024, 2006}
-SendEvent {Click , 1024, 2006} ; Sends Double Click
+mousemove 1221, 2006
+SendEvent {Click , 1221, 2006}
+SendEvent {Click , 1221, 2006} ; Sends Double Click
 Sleep 2
 SendEvent, ^c
 ClipWait,1
@@ -67,9 +67,9 @@ IfExist, C:\temp\hdrtens.txt
 {
     MouseGetPos x, y
 oCB := ClipboardAll ; 
-mousemove 1024, 2006
-SendEvent {Click , 1024, 2006}
-SendEvent {Click , 1024, 2006} ; Sends Double Click
+mousemove 1221, 2006
+SendEvent {Click , 1221, 2006}
+SendEvent {Click , 1221, 2006} ; Sends Double Click
 Sleep 1
 SendEvent, ^c
 ClipWait,1
@@ -85,9 +85,9 @@ IfExist, C:\temp\hdr25s.txt
 {
         MouseGetPos x, y
 oCB := ClipboardAll ; 
-mousemove 1024, 2006
-SendEvent {Click , 1024, 2006}
-SendEvent {Click , 1024, 2006} ; Sends Double Click
+mousemove 1221, 2006
+SendEvent {Click , 1221, 2006}
+SendEvent {Click , 1221, 2006} ; Sends Double Click
 Sleep 1
 SendEvent, ^c
 ClipWait,1
@@ -103,9 +103,9 @@ IfExist, C:\temp\hdrhalfs.txt
 {
         MouseGetPos x, y
 oCB := ClipboardAll ; 
-mousemove 1024, 2006
-SendEvent {Click , 1024, 2006}
-SendEvent {Click , 1024, 2006} ; Sends Double Click
+mousemove 1221, 2006
+SendEvent {Click , 1221, 2006}
+SendEvent {Click , 1221, 2006} ; Sends Double Click
 Sleep 1
 SendEvent, ^c
 ClipWait,1
@@ -121,9 +121,9 @@ IfExist, C:\temp\hdrfulls.txt
 {
         MouseGetPos x, y
 oCB := ClipboardAll ; 
-mousemove 1024, 2006
-SendEvent {Click , 1024, 2006}
-SendEvent {Click , 1024, 2006} ; Sends Double Click
+mousemove 1221, 2006
+SendEvent {Click , 1221, 2006}
+SendEvent {Click , 1221, 2006} ; Sends Double Click
 Sleep 1
 SendEvent, ^c
 ClipWait,1
@@ -139,9 +139,9 @@ IfExist, C:\temp\hdrdoubles.txt
 {
         MouseGetPos x, y
 oCB := ClipboardAll ; 
-mousemove 1024, 2006
-SendEvent {Click , 1024, 2006}
-SendEvent {Click , 1024, 2006} ; Sends Double Click
+mousemove 1221, 2006
+SendEvent {Click , 1221, 2006}
+SendEvent {Click , 1221, 2006} ; Sends Double Click
 Sleep 1
 SendEvent, ^c
 ClipWait,1

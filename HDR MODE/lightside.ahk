@@ -14,6 +14,9 @@ SetMouseDelay, -1 ; Remove short delay done automatically after Click and MouseM
 #Include %A_ScriptDir%\zoneconfig.ahk
 
 #Include, C:\AUTOHOTKEY_SCRIPTS\Main Navigation\middletoolsconfig.ahk
+CoordMode, Pixel
+
+
 tabexistance := 00000
 ;HDR pane extension existance
 PixelGetColor, tabexistance, %hdr_dot_x%,%lowernavbar_y%
@@ -29,6 +32,8 @@ FileDelete, C:\temp\tabopen.txt
 FileAppend, (on), C:\temp\tabclosed.txt
 }
 
+
+
 bx := 00000
 dx := 00000
 sx := 00000
@@ -38,8 +43,8 @@ specx := 00000
 
 
 
-on = 0x838383
-off = 0xFFFFFF
+off = 0xF6F6F6
+on = 0x707070
 black_s := off
 dark_s := off
 shadow_s := off
@@ -47,7 +52,7 @@ light_s := on
 highlight_s := on
 specular_s :=  on
 
-FileAppend, _%lx%_%hx%_%specx%___| ,C:\temp\pixelcheck.txt]
+;FileAppend, _%lx%_%hx%_%specx%___| ,C:\temp\pixelcheck.txt]
 
 IfExist, C:\temp\tabopen.txt
 {
@@ -57,6 +62,7 @@ IfExist, C:\temp\tabopen.txt
     PixelGetColor, lx, %tabopenx%, %light%,
     PixelGetColor, hx, %tabopenx%, %highlight%,
     PixelGetColor, specx, %tabopenx%, %specular%,
+    SetEnv, bx, %bx%
 
 
     IfEqual bx, %black_s%
@@ -99,53 +105,53 @@ IfExist, C:\temp\tabopen.txt
 }
 IfExist, C:\temp\tabclosed.txt 
 {
-MouseMove 1444, 1700
-SendEvent {Click , 1444, 1700}
+MouseMove 1347, 1700
+SendEvent {Click , 1347, 1700}
 sleep 50
-    PixelGetColor, bx2, %tabclosedx%, %black%, 
-    PixelGetColor, dx2, %tabclosedx%, %dark%, 
-    PixelGetColor, sx2, %tabclosedx%, %shadow%,
-    PixelGetColor, lx2, %tabclosedx%, %light%,
-    PixelGetColor, hx2, %tabclosedx%, %highlight%,
-    PixelGetColor, specx2, %tabclosedx%, %specular%,
+    PixelGetColor, bx, %tabclosedx%, %black%, 
+    PixelGetColor, dx, %tabclosedx%, %dark%, 
+    PixelGetColor, sx, %tabclosedx%, %shadow%,
+    PixelGetColor, lx, %tabclosedx%, %light%,
+    PixelGetColor, hx, %tabclosedx%, %highlight%,
+    PixelGetColor, specx, %tabclosedx%, %specular%,
 
-    IfEqual bx2, %black_s%
+    IfEqual bx, %black_s%
     {
         MouseMove, %tabclosedx%, %black%
         SendEvent, {Click, %tabclosedx%, %black%}
     }
 
-    IfEqual, sx2, %shadow_s%
+    IfEqual, sx, %shadow_s%
     {
         MouseMove, %tabclosedx%, %shadow%
     SendEvent, {Click, %tabclosedx%, %shadow%}
     }
 
-    IfEqual, dx2, %dark_s% 
+    IfEqual, dx, %dark_s% 
     {
         MouseMove, %tabclosedx%, %dark%
         SendEvent, {Click, %tabclosedx%, %dark%}
     }
 
-    IfEqual lx2, %light_s%
+    IfEqual lx, %light_s%
     {
         MouseMove, %tabclosedx%, %light%
         SendEvent, {Click, %tabclosedx%, %light%}
     }
 
-    IfEqual, hx2, %highlight_s%
+    IfEqual, hx, %highlight_s%
     {
         MouseMove, %tabclosedx%, %hightlight%
     SendEvent, {Click, %tabclosedx%, %highlight%}
     }
 
-    IfEqual, specx2, %specular_s% 
+    IfEqual, specx, %specular_s% 
     {
         MouseMove, %tabclosedx%, %specular%
         SendEvent, {Click, %tabclosedx%, %specular%}
     }
-MouseMove 1413, 1704
-SendEvent {Click , 1413, 1704}
+MouseMove 1320, 1704
+SendEvent {Click , 1320, 1704}
     Exit
 }
 Exit

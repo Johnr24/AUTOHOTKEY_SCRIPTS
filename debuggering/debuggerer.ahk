@@ -12,7 +12,29 @@ SplitPath, A_ScriptName, , , , thisscriptname
 ; SetKeyDelay, -1, -1 ; Remove short delay done automatically after every keystroke sent by Send or ControlSend
 ; SetMouseDelay, -1 ; Remove short delay done automatically after Click and MouseMove/Click/Drag
 #Include, C:\AUTOHOTKEY_SCRIPTS\Main Navigation\middletoolsconfig.ahk
+#Include, C:\AUTOHOTKEY_SCRIPTS\HDR MODE\zoneconfig.ahk
 
 CoordMode, Pixel
-    PixelGetColor, tracker_c, %blurtool%, 1665
+    PixelGetColor, tracker_c, %global_orange_x%, %global_orange_y%
+
     FileAppend, %tracker_c%, C:/temp/fuck.txt
+
+
+    PixelGetColor, bx, %tabclosedx%, %black%, 
+    PixelGetColor, dx, %tabclosedx%, %dark%, 
+    PixelGetColor, sx, %tabclosedx%, %shadow%,
+    PixelGetColor, lx, %tabclosedx%, %light%,
+    PixelGetColor, hx, %tabclosedx%, %highlight%,
+    PixelGetColor, specx, %tabclosedx%, %specular%,
+    SetEnv, bx, %bx%
+
+    
+    FileAppend, 
+    (
+    %bx%
+    %dx%
+    %sx%
+    %lx%
+    %hx%
+    %specx%
+    ) ,C:\temp\pixelcheck.txt]

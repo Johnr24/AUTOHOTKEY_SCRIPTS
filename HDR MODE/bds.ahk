@@ -14,6 +14,7 @@ SetMouseDelay, -1 ; Remove short delay done automatically after Click and MouseM
 #Include %A_ScriptDir%\zoneconfig.ahk
 
 #Include, C:\AUTOHOTKEY_SCRIPTS\Main Navigation\middletoolsconfig.ahk
+CoordMode, Pixel
 
 
 tabexistance := 00000
@@ -42,8 +43,8 @@ specx := 00000
 
 
 
-on = 0x838383
-off = 0xFFFFFF
+off = 0xF6F6F6
+on = 0x707070
 black_s := on
 dark_s := on
 shadow_s := on
@@ -51,7 +52,7 @@ light_s := off
 highlight_s := off
 specular_s :=  off
 
-FileAppend, _%lx%_%hx%_%specx%___| ,C:\temp\pixelcheck.txt]
+;FileAppend, _%lx%_%hx%_%specx%___| ,C:\temp\pixelcheck.txt]
 
 IfExist, C:\temp\tabopen.txt
 {
@@ -104,8 +105,8 @@ IfExist, C:\temp\tabopen.txt
 }
 IfExist, C:\temp\tabclosed.txt 
 {
-MouseMove 1444, 1700
-SendEvent {Click , 1444, 1700}
+MouseMove 1347, 1700
+SendEvent {Click , 1347, 1700}
 sleep 50
     PixelGetColor, bx, %tabclosedx%, %black%, 
     PixelGetColor, dx, %tabclosedx%, %dark%, 
@@ -149,8 +150,8 @@ sleep 50
         MouseMove, %tabclosedx%, %specular%
         SendEvent, {Click, %tabclosedx%, %specular%}
     }
-MouseMove 1413, 1704
-SendEvent {Click , 1413, 1704}
+MouseMove 1320, 1704
+SendEvent {Click , 1320, 1704}
     Exit
 }
 Exit
