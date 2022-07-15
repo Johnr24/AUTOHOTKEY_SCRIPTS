@@ -17,6 +17,22 @@ SetMouseDelay, -1 ; Remove short delay done automatically after Click and MouseM
 CoordMode, Pixel
 
 
+
+firstcheck:
+IfExist, C:\temp\hdractive.txt
+{
+    Goto, straight
+}
+Else
+{
+    Goto, gay
+}
+gay:
+
+Run, "C:\AUTOHOTKEY_SCRIPTS\HDR MODE\hdrclassictoggle.ahk"
+Goto, straight
+
+straight:
 tabexistance := 00000
 ;HDR pane extension existance
 PixelGetColor, tabexistance, %hdr_dot_x%,%lowernavbar_y%
@@ -53,6 +69,8 @@ highlight_s := off
 specular_s :=  off
 
 ;FileAppend, _%lx%_%hx%_%specx%___| ,C:\temp\pixelcheck.txt]
+
+
 
 IfExist, C:\temp\tabopen.txt
 {

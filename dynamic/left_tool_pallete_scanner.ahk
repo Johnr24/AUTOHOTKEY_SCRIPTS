@@ -41,6 +41,7 @@ if WinActive("ahk_exe Resolve.exe")
     IfEqual, hdr_c, 0xFFFFFF
     {
         Run, C:\AUTOHOTKEY_SCRIPTS\exe\hdractive.exe
+        FileAppend, (on),C:\temp\hdractive.txt
         Goto, hdrcheckeroff
     }
 Else
@@ -57,5 +58,7 @@ IfEqual, hdr_c, 0xFFFFFF
 }
 Else
 {
+    FileDelete, C:\temp\hdractive.txt
     Goto, resolvecheck
+
 }

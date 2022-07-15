@@ -16,6 +16,21 @@ SetMouseDelay, -1 ; Remove short delay done automatically after Click and MouseM
 #Include, C:\AUTOHOTKEY_SCRIPTS\Main Navigation\middletoolsconfig.ahk
 CoordMode, Pixel
 
+firstcheck:
+IfExist, C:\temp\hdractive.txt
+{
+    Goto, straight
+}
+Else
+{
+    Goto, gay
+}
+gay:
+
+Run, "C:\AUTOHOTKEY_SCRIPTS\HDR MODE\hdrclassictoggle.ahk"
+Goto, straight
+
+straight:
 
 tabexistance := 00000
 ;HDR pane extension existance
