@@ -28,6 +28,7 @@ Else
 gay:
 
 Run, "C:\AUTOHOTKEY_SCRIPTS\HDR MODE\hdrclassictoggle.ahk"
+sleep, 150 
 Goto, straight
 
 straight:
