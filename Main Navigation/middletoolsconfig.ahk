@@ -186,16 +186,16 @@ mm_better := 2770
 mm_person := 1543
 mm_features := 1612
 
-mm_fftracked := 2050
-mm_lftracked := 2230
-mm_trackbackoneframe := 2085
-mm_trackforwardoneframe := 2222
-mm_trackforward := 2197
+mm_fftracked := 2070
+mm_lftracked := 2250
+mm_trackbackoneframe := 2105
+mm_trackforwardoneframe := 2242
+mm_trackforward := 2117
 mm_trackbackward := 2110
-mm_trackstop := 2140
-mm_track_fwd_back := 2170
-mm_plus := 2749
-mm_minus := 2777
+mm_trackstop := 2160
+mm_track_fwd_back := 2210
+mm_plus := 2769
+mm_minus := 2797
 
 mm_maskinvert := 2819
 mm_show := 2852
