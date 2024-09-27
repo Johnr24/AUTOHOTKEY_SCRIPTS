@@ -9,15 +9,16 @@ rgb_mixer := 271
 motion_effects := 331
 ;space
 ;space
-curves := 1699
-colourwarper := 1765
-qualifer := 1838
-powerwindow := 1896
-tracker := 1975
-magicmask := 2046
-blurtool := 2109
-keytool := 2183
-sizing := 2253
+curves := 1656
+ColourSlice := 1728 
+colourwarper := 1798
+qualifer := 1872
+powerwindow := 1950
+tracker := 2020
+magicmask := 2082
+blurtool := 2152
+keytool := 2216
+sizing := 2280
 ;space
 ;space
 ;space
@@ -193,7 +194,7 @@ mm_trackforwardoneframe := 2242
 mm_trackforward := 2117
 mm_trackbackward := 2110
 mm_trackstop := 2160
-mm_track_fwd_back := 2210
+mm_track_fwd_back := 2190
 mm_plus := 2769
 mm_minus := 2797
 
