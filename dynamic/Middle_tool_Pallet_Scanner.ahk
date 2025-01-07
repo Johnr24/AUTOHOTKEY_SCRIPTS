@@ -11,28 +11,29 @@ SplitPath, A_ScriptName, , , , thisscriptname
 
 CoordMode, Pixel
 
-
 resolvecheck:
-if not WinActive("ahk_exe Resolve.exe")
-    Goto, resolvecheck
-if WinActive("ahk_exe Resolve.exe")
+    while not WinActive("ahk_exe Resolve.exe")
+        Sleep, 100
+
     PixelGetColor, colourtabcheck, %colourpage%, %pagebar%
-    IfEqual, colourtabcheck, 0x000000
-    {
+    if (colourtabcheck = 0x000000)
         Goto, keysuspend_colour
-    }
-    Else
-    {
-        PixelGetColor, editpagecheck, %editpage%, %pagebar%
-        IfEqual, editpagecheck, 0x000000
-        {
-            Goto, keysuspend_edit
-        }
-        Else
-        {
-            Goto, resolvecheck
-        }
-    }
+
+    PixelGetColor, editpagecheck, %editpage%, %pagebar%
+    if (editpagecheck = 0x000000)
+        Goto, keysuspend_edit
+
+    Goto, resolvecheck
+
+inputdialog:
+    if WinActivate, ("Input")
+        Goto, resolvecheck
+    else
+        Goto, WinActivate
+
+winactivate:
+    WinActivate, ahk_exe Resolve.exe
+    Goto, resolvecheck
 curvescheck:
 if WinActive("ahk_exe Resolve.exe")
     PixelGetColor, curves_c, %curves%, %tby_curves%
@@ -40,7 +41,7 @@ if WinActive("ahk_exe Resolve.exe")
     {
         Run, C:\AUTOHOTKEY_SCRIPTS\exe\curvesactive.exe
         FileAppend, on, C:\temp\mt\curves.txt
-        WinActivate, ahk_exe Resolve.exe
+        ;WinActivate, ahk_exe Resolve.exe
         Goto, curvescheckeroff
     }
 Else
@@ -63,12 +64,12 @@ Else
 
 colourwarpercheck:
 if WinActive("ahk_exe Resolve.exe")
-    PixelGetColor, colourwarper_c, %colourwarper%, %tby%
+    PixelGetColor, colourwarper_c, %colourwarper%, %tby_colour_warper%
     IfEqual, colourwarper_c, 0xD8D8D8
     {
         Run, C:\AUTOHOTKEY_SCRIPTS\exe\cwactive.exe
         FileAppend, on, C:\temp\mt\colourwarper.txt
-        WinActivate, ahk_exe Resolve.exe
+        ;WinActivate, ahk_exe Resolve.exe
         Goto, colourwarpercheckeroff
     }
     Else
@@ -79,7 +80,7 @@ Goto, qualiferchecker
 
 colourwarpercheckeroff:
 if WinActive("ahk_exe Resolve.exe")
-    PixelGetColor, colourwarper_c, %colourwarper%, %tby%
+    PixelGetColor, colourwarper_c, %colourwarper%, %tby_colour_warper%
 IfEqual, colourwarper_c, 0xD8D8D8
 {
     Goto, colourwarpercheckeroff
@@ -97,7 +98,7 @@ if WinActive("ahk_exe Resolve.exe")
     {
         Run, C:\AUTOHOTKEY_SCRIPTS\exe\keyactive.exe
         FileAppend, on, C:\temp\mt\keyer.txt
-        WinActivate, ahk_exe Resolve.exe
+        ;WinActivate, ahk_exe Resolve.exe
         Goto, qualifercheckeroff
     }
     Else
@@ -125,7 +126,7 @@ if WinActive("ahk_exe Resolve.exe")
     {
         Run, C:\AUTOHOTKEY_SCRIPTS\exe\windowactive.exe
         FileAppend, on, C:\temp\mt\window.txt
-        WinActivate, ahk_exe Resolve.exe
+        ;WinActivate, ahk_exe Resolve.exe
         Goto, windowcheckeroff
     }
     Else
@@ -154,7 +155,7 @@ if WinActive("ahk_exe Resolve.exe")
     {
         Run, C:\AUTOHOTKEY_SCRIPTS\exe\trackeractive.exe
         FileAppend, on, C:\temp\mt\tracker.txt
-        WinActivate, ahk_exe Resolve.exe
+        ;WinActivate, ahk_exe Resolve.exe
         Goto, trackercheckeroff
     }
     Else
@@ -184,7 +185,7 @@ if WinActive("ahk_exe Resolve.exe")
     {
         Run, C:\AUTOHOTKEY_SCRIPTS\exe\magicmaskactive.exe
         FileAppend, on, C:\temp\mt\magicmask.txt
-        WinActivate, ahk_exe Resolve.exe
+        ;WinActivate, ahk_exe Resolve.exe
         Goto, magicmaskcheckeroff
     }
     Else
@@ -213,7 +214,7 @@ if WinActive("ahk_exe Resolve.exe")
     {
         Run, C:\AUTOHOTKEY_SCRIPTS\exe\blurtoolactive.exe
         FileAppend, on, C:\temp\mt\blur.txt
-        WinActivate, ahk_exe Resolve.exe
+        ;WinActivate, ahk_exe Resolve.exe
         Goto, blurtoolcheckeroff
     }
     Else
@@ -265,11 +266,11 @@ Else
 sizingchecker:
 if WinActive("ahk_exe Resolve.exe")
     PixelGetColor, key_c, %sizing%, %tby%
-    IfEqual, key_c, 0x484848
+    IfEqual, key_c, 0xD8D8D8
     {
         Run, C:\AUTOHOTKEY_SCRIPTS\exe\sizingactive.exe
         FileAppend, on, C:\temp\mt\sizing.txt
-        WinActivate, ahk_exe Resolve.exe
+        ;WinActivate, ahk_exe Resolve.exe
         Goto, sizingchecker2
     }
     Else
@@ -281,7 +282,7 @@ Goto, editcheck
 sizingchecker2:
 if WinActive("ahk_exe Resolve.exe")
     PixelGetColor, key_c, %sizing%, %tby%
-IfEqual, key_c, 0x484848
+IfEqual, key_c, 0xD8D8D8
 {
     Goto, sizingchecker2
 }
@@ -297,7 +298,7 @@ if WinActive("ahk_exe Resolve.exe")
     IfEqual, edit_c, 0x000000
     {
         Run, C:\AUTOHOTKEY_SCRIPTS\exe\editactive.exe
-        WinActivate, ahk_exe Resolve.exe
+        ;WinActivate, ahk_exe Resolve.exe
         Goto, editcheckhold
     }
     Else
@@ -320,14 +321,14 @@ Else
 
 
 keysuspend_colour:
-WinActivate, ahk_exe Resolve.exe
+;WinActivate, ahk_exe Resolve.exe
 IfExist, C:\temp\keysuspend.txt
 {    
     Goto, keysuspend_colour
 }
 Else
 {
-    WinActivate, ahk_exe Resolve.exe
+    ;WinActivate, ahk_exe Resolve.exe
     Goto, curvescheck
 }
 

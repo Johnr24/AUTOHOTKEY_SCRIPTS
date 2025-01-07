@@ -1,5 +1,6 @@
 tby := 1665 ;tool bar Y
 tby_curves := 1664
+tby_colour_warper := 1666
 ;space
 camera_raw := 29
 color_match := 89
@@ -11,8 +12,8 @@ motion_effects := 331
 ;space
 curves := 1656
 ColourSlice := 1728 
-colourwarper := 1798
-qualifer := 1872
+colourwarper := 1799
+qualifer := 1873
 powerwindow := 1950
 tracker := 2020
 magicmask := 2082
