@@ -1,5 +1,5 @@
 tby := 1665 ;tool bar Y
-tby_curves := 1664
+tby_curves := 1692
 tby_colour_warper := 1666
 ;space
 camera_raw := 29
@@ -10,7 +10,7 @@ rgb_mixer := 271
 motion_effects := 331
 ;space
 ;space
-curves := 1656
+curves := 1666
 ColourSlice := 1728 
 colourwarper := 1799
 qualifer := 1873
@@ -46,8 +46,8 @@ iny := 2090
 
 ;keywindow
 
-1stcollum := 2659
-2ndCollum := 2824
+first_collum := 2659
+second_collum := 2824
 keyoutputgain := 1913
 
 hdr_dot_x :=  1318
