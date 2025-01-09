@@ -1,6 +1,6 @@
-tby := 1667 ;tool bar Y
+tby := 1676 ;tool bar Y
 tby_curves := 1692
-tby_colour_warper := 1666
+tby_colourwarper := 1676
 ;space
 camera_raw := 29
 color_match := 89
@@ -15,14 +15,14 @@ editpage := 1827
 colourpage := 1954
 curves := 1666
 ColourSlice := 1728 
-colourwarper := 1799
+colourwarper := 1800
 qualifer := 1873
-powerwindow := 1950
-tracker := 2020
-magicmask := 2082
+powerwindow := 1951
+tracker := 2019
+magicmask := 2081
 blurtool := 2152
-keytool := 2216
-sizing := 2280
+keytool := 2212
+sizing := 2281
 ;space
 ;space
 ;space
@@ -32,17 +32,16 @@ info := 4067
 ;space
 ;space
 ;space
-cya := 1710 
+cya := 1715
 customcurve := 2770
 huevshue := 2800
 huevssat := 2830
 huevslum := 2860
-lumvssat := 2885
+lumvssat := 2700
 satvssat := 2915
 satvslum := 2359
 ;space
 lowernavbar_y := 1707
-
 ;curve boxes xy
 inx := 3029
 iny := 2090
