@@ -1,4 +1,4 @@
-tby := 1665 ;tool bar Y
+tby := 1667 ;tool bar Y
 tby_curves := 1692
 tby_colour_warper := 1666
 ;space
@@ -10,6 +10,9 @@ rgb_mixer := 271
 motion_effects := 331
 ;space
 ;space
+pagebar := 2140
+editpage := 1827
+colourpage := 1954
 curves := 1666
 ColourSlice := 1728 
 colourwarper := 1799
@@ -146,9 +149,7 @@ mt_reset := 2861
 mt_reset_y := 1547
 
 ;FileAppend, %webtoggle% , C:\temp\fuck.txt
-pagebar := 2130
-editpage := 1827
-colourpage := 1938
+
 
 ;key window
 keyinput_y := 1745

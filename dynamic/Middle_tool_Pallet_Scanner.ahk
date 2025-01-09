@@ -13,8 +13,7 @@ CoordMode, Pixel
 
 
 resolvecheck:
-if not WinActive("ahk_exe Resolve.exe")
-    Goto, resolvecheck
+
 if WinActive("ahk_exe Resolve.exe")
     PixelGetColor, colourtabcheck, %colourpage%, %pagebar%
     IfEqual, colourtabcheck, 0x000000
@@ -33,10 +32,15 @@ if WinActive("ahk_exe Resolve.exe")
             Goto, resolvecheck
         }
     }
+    if not WinActive("ahk_exe Resolve.exe")
+        sleep, 100
+        Goto, resolvecheck
+
+
 curvescheck:
 if WinActive("ahk_exe Resolve.exe")
     PixelGetColor, curves_c, %curves%, %tby_curves%
-    IfEqual, curves_c, 0x6F6F6F
+    IfEqual, curves_c, 0x717171
     {
         Run, C:\AUTOHOTKEY_SCRIPTS\exe\curvesactive.exe
         FileAppend, on, C:\temp\mt\curves.txt
@@ -51,7 +55,7 @@ Else
 curvescheckeroff:
 if WinActive("ahk_exe Resolve.exe")
     PixelGetColor, curves_c, %curves%, %tby_curves%
-IfEqual, curves_c, 0x6F6F6F
+IfEqual, curves_c, 0x717171
 {
     Goto, curvescheckeroff
 }

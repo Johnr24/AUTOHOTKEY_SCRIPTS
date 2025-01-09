@@ -1,0 +1,33 @@
+import pyautogui
+import time
+import os
+# Specify the position (x, y) of the pixel
+mouse_position = pyautogui.position()
+x, y = 1664, 1672
+def read_variables(file_path):
+    variables = {}
+    with open(file_path, 'r') as file:
+        for line in file:
+            if ':=' in line:
+                key, value = line.split(':=')
+                variables[key.strip()] = value.strip()
+    return variables
+
+# Usage
+file_path = 'c:/AUTOHOTKEY_SCRIPTS/Main Navigation/middletoolsconfig.ahk'
+mtc = read_variables(file_path)
+
+
+
+while True:
+    # Get the color of the pixel at the specified position
+    pixel_color = pyautogui.screenshot().getpixel((x, y))
+    
+    print(f"The color of the pixel at ({x}, {y}) is {pixel_color}")
+    # rerport mouse position
+    time.sleep(1)
+    if pixel_color == (226, 226, 226):
+        os.startfile("C:\AUTOHOTKEY_SCRIPTS\exe\curvesactive.exe")
+        while pixel_color == (226, 226, 226):
+            time.sleep(1)
+            pixel_color = pyautogui.screenshot().getpixel((x, y))
