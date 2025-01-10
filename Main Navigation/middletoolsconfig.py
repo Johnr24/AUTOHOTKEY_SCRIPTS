@@ -1,6 +1,13 @@
 tby = 1676 #tool bar Y
-tby_curves = 1692
-tby_colourwarper = 1676
+tby_curves = 1660
+tby_colourwarper = 1667
+tby_qualifer = 1660
+tby_window = 1660
+tby_tracker = 1660
+tby_magicmask = 1660
+tby_blurtool = 1660
+tby_keytool = tby_qualifer + 5
+tby_sizing = tby_qualifer - 1
 #space
 camera_raw = 29
 color_match = 89
@@ -12,16 +19,16 @@ motion_effects = 331
 #space
 pagebar = 2140
 editpage = 1827
-colourpage = 1954
+colourpage = 1930
 curves = 1660
 ColourSlice = 1728 
 colourwarper = 1800
 qualifer = 1873
-window = 1951
+window = 1940
 tracker = 2019
 magicmask = 2081
-blurtool = 2152
-keytool = 2212
+blurtool = 2146
+keytool = 2214
 sizing = 2281
 #space
 #space

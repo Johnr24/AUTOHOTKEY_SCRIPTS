@@ -1,11 +1,14 @@
 import pyautogui
  
-curves =  251, 251, 251
+curves =  100, 100, 100
 colourwarper = 216, 216, 216
-qualifer =  58, 58, 58
-window =  242, 242, 242
-tracker =  229, 229, 229
-magicmask =  232, 232, 232
-blurtool =  204, 204, 204
-keytool =  50, 50, 50
-sizing =  116, 116, 116
+qualifer =  46, 46, 46
+window =  243, 243, 243
+tracker =  44, 44, 44
+magicmask =  66, 66, 66
+blurtool =  216, 216, 216
+keytool =  255, 255, 255
+sizing =  255, 255, 255
+pagetab =  0, 0, 0
+hdr_c =  255, 255, 255
+background = 40, 40, 40

@@ -2,3 +2,6 @@ joey_gitignore
 FFMPEG
 .VSCodeCounter
 workspace.code-workspace
+/dynamic/build/*
+/dynamic/dist/*
+/dynamic/_pycache_/*

@@ -5,6 +5,7 @@ import sys
 import psutil
 import win32gui
 import win32process
+import toolcolour
 
 # Add the directory containing middletoolsconfig.py to the Python path
 sys.path.append(r"C:\AUTOHOTKEY_SCRIPTS\Main Navigation")
@@ -29,7 +30,7 @@ def check_resolve():
         
         if process_name and process_name.lower() == "resolve.exe":
             colourtabcheck = pyautogui.screenshot().getpixel((mtc.colourpage, mtc.pagebar))
-            if colourtabcheck == (0, 0, 0):
+            if colourtabcheck == toolcolour.pagetab:
                 check_hdr()
         time.sleep(waittime)
 
@@ -40,7 +41,7 @@ def check_hdr():
         
         if process_name and process_name.lower() == "resolve.exe":
             hdr_c = pyautogui.screenshot().getpixel((mtc.HDR_tools, mtc.tby))
-            if hdr_c == (255, 255, 255):
+            if hdr_c == toolcolour.hdr_c:
                 os.startfile(r"C:\AUTOHOTKEY_SCRIPTS\exe\hdractive.exe")
                 with open(r"C:\temp\hdractive.txt", "w") as f:
                     f.write("(on)")
@@ -56,9 +57,10 @@ def check_hdr_off():
         
         if process_name and process_name.lower() == "resolve.exe":
             hdr_c = pyautogui.screenshot().getpixel((mtc.HDR_tools, mtc.tby))
-            if hdr_c != (255, 255, 255):
+            if hdr_c != toolcolour.hdr_c:
                 os.remove(r"C:\temp\hdractive.txt")
                 check_resolve()
         time.sleep(waittime)
 
+mtc.tby = mtc.tby - 10
 check_resolve()
